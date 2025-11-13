@@ -271,16 +271,24 @@ export default function ProjectsPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {/* Gamma */}
                   <Link href="/teardowns/gamma">
-                    <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow h-full cursor-pointer">
+                    <Card className="border-l-4 border-l-orange-500 hover:shadow-xl transition-all h-full cursor-pointer bg-gradient-to-br from-orange-50 to-white group">
                       <CardHeader>
-                        <CardTitle className="text-lg">Gamma</CardTitle>
+                        <div className="flex items-center justify-between">
+                          <CardTitle className="text-lg group-hover:text-orange-600 transition-colors">Gamma</CardTitle>
+                          <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                            G
+                          </div>
+                        </div>
                         <CardDescription className="text-sm">AI-powered presentation builder</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <p className="text-sm text-muted-foreground leading-relaxed">
                           Deep analysis of prompt-to-presentation flow, template system, and collaboration features.
                         </p>
-                        <Button variant="ghost" className="mt-4 p-0 h-auto font-semibold text-primary">
+                        <Button
+                          variant="ghost"
+                          className="mt-4 p-0 h-auto font-semibold text-orange-600 hover:text-orange-700"
+                        >
                           Read Full Teardown <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </CardContent>
@@ -289,9 +297,14 @@ export default function ProjectsPage() {
 
                   {/* V0 */}
                   <Link href="/teardowns/v0">
-                    <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow h-full cursor-pointer">
+                    <Card className="border-l-4 border-l-black hover:shadow-xl transition-all h-full cursor-pointer bg-gradient-to-br from-gray-50 to-white group">
                       <CardHeader>
-                        <CardTitle className="text-lg">V0</CardTitle>
+                        <div className="flex items-center justify-between">
+                          <CardTitle className="text-lg group-hover:text-gray-700 transition-colors">V0</CardTitle>
+                          <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                            V
+                          </div>
+                        </div>
                         <CardDescription className="text-sm">Generative UI by Vercel</CardDescription>
                       </CardHeader>
                       <CardContent>
@@ -299,7 +312,10 @@ export default function ProjectsPage() {
                           Examining code generation patterns, component architecture, and iterative refinement
                           mechanics.
                         </p>
-                        <Button variant="ghost" className="mt-4 p-0 h-auto font-semibold text-primary">
+                        <Button
+                          variant="ghost"
+                          className="mt-4 p-0 h-auto font-semibold text-black hover:text-gray-700"
+                        >
                           Read Full Teardown <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </CardContent>
@@ -307,9 +323,14 @@ export default function ProjectsPage() {
                   </Link>
 
                   {/* Lovable */}
-                  <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
+                  <Card className="border-l-4 border-l-orange-400 hover:shadow-xl transition-all bg-gradient-to-br from-orange-100/40 to-white opacity-60">
                     <CardHeader>
-                      <CardTitle className="text-lg">Lovable</CardTitle>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-lg">Lovable</CardTitle>
+                        <div className="w-10 h-10 bg-orange-400 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                          L
+                        </div>
+                      </div>
                       <CardDescription className="text-sm">AI full-stack app builder</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -323,9 +344,14 @@ export default function ProjectsPage() {
                   </Card>
 
                   {/* Cursor */}
-                  <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
+                  <Card className="border-l-4 border-l-gray-800 hover:shadow-xl transition-all bg-gradient-to-br from-gray-100/40 to-white opacity-60">
                     <CardHeader>
-                      <CardTitle className="text-lg">Cursor</CardTitle>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-lg">Cursor</CardTitle>
+                        <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                          C
+                        </div>
+                      </div>
                       <CardDescription className="text-sm">AI-first code editor</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -339,9 +365,14 @@ export default function ProjectsPage() {
                   </Card>
 
                   {/* ChatGPT */}
-                  <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
+                  <Card className="border-l-4 border-l-orange-600 hover:shadow-xl transition-all bg-gradient-to-br from-orange-50/50 to-white opacity-60">
                     <CardHeader>
-                      <CardTitle className="text-lg">ChatGPT</CardTitle>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-lg">ChatGPT</CardTitle>
+                        <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                          G
+                        </div>
+                      </div>
                       <CardDescription className="text-sm">Conversational AI platform</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -355,9 +386,14 @@ export default function ProjectsPage() {
                   </Card>
 
                   {/* Gemini */}
-                  <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
+                  <Card className="border-l-4 border-l-gray-700 hover:shadow-xl transition-all bg-gradient-to-br from-gray-50/50 to-white opacity-60">
                     <CardHeader>
-                      <CardTitle className="text-lg">Gemini</CardTitle>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-lg">Gemini</CardTitle>
+                        <div className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                          G
+                        </div>
+                      </div>
                       <CardDescription className="text-sm">Google&apos;s AI assistant</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -371,9 +407,14 @@ export default function ProjectsPage() {
                   </Card>
 
                   {/* NotebookLM */}
-                  <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
+                  <Card className="border-l-4 border-l-orange-500 hover:shadow-xl transition-all bg-gradient-to-br from-orange-100/30 to-white opacity-60">
                     <CardHeader>
-                      <CardTitle className="text-lg">NotebookLM</CardTitle>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-lg">NotebookLM</CardTitle>
+                        <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                          N
+                        </div>
+                      </div>
                       <CardDescription className="text-sm">AI research assistant</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -387,9 +428,14 @@ export default function ProjectsPage() {
                   </Card>
 
                   {/* N8N */}
-                  <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
+                  <Card className="border-l-4 border-l-gray-900 hover:shadow-xl transition-all bg-gradient-to-br from-gray-100/30 to-white opacity-60">
                     <CardHeader>
-                      <CardTitle className="text-lg">N8N</CardTitle>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-lg">N8N</CardTitle>
+                        <div className="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                          N
+                        </div>
+                      </div>
                       <CardDescription className="text-sm">Workflow automation platform</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -403,9 +449,14 @@ export default function ProjectsPage() {
                   </Card>
 
                   {/* Replit */}
-                  <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
+                  <Card className="border-l-4 border-l-orange-700 hover:shadow-xl transition-all bg-gradient-to-br from-orange-50/40 to-white opacity-60">
                     <CardHeader>
-                      <CardTitle className="text-lg">Replit</CardTitle>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-lg">Replit</CardTitle>
+                        <div className="w-10 h-10 bg-orange-700 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                          R
+                        </div>
+                      </div>
                       <CardDescription className="text-sm">Collaborative coding platform</CardDescription>
                     </CardHeader>
                     <CardContent>
