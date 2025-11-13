@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils"
 import { Logo } from "@/components/logo"
 
 const navItems = [
-  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },

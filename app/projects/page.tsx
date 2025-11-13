@@ -264,33 +264,43 @@ export default function ProjectsPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Gamma */}
-              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-lg">Gamma</CardTitle>
-                  <CardDescription className="text-sm">AI-powered presentation builder</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Deep analysis of prompt-to-presentation flow, template system, and collaboration features.
-                  </p>
-                </CardContent>
-              </Card>
+              <Link href="/teardowns/gamma">
+                <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow h-full cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-lg">Gamma</CardTitle>
+                    <CardDescription className="text-sm">AI-powered presentation builder</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Deep analysis of prompt-to-presentation flow, template system, and collaboration features.
+                    </p>
+                    <Button variant="ghost" className="mt-4 p-0 h-auto font-semibold text-primary">
+                      Read Full Teardown <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
 
               {/* V0 */}
-              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-lg">V0</CardTitle>
-                  <CardDescription className="text-sm">Generative UI by Vercel</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Examining code generation patterns, component architecture, and iterative refinement mechanics.
-                  </p>
-                </CardContent>
-              </Card>
+              <Link href="/teardowns/v0">
+                <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow h-full cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-lg">V0</CardTitle>
+                    <CardDescription className="text-sm">Generative UI by Vercel</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Examining code generation patterns, component architecture, and iterative refinement mechanics.
+                    </p>
+                    <Button variant="ghost" className="mt-4 p-0 h-auto font-semibold text-primary">
+                      Read Full Teardown <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
 
               {/* Lovable */}
-              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
                 <CardHeader>
                   <CardTitle className="text-lg">Lovable</CardTitle>
                   <CardDescription className="text-sm">AI full-stack app builder</CardDescription>
@@ -299,11 +309,14 @@ export default function ProjectsPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     Analysis of end-to-end app generation, deployment flow, and developer experience.
                   </p>
+                  <Badge variant="secondary" className="mt-4">
+                    Coming Soon
+                  </Badge>
                 </CardContent>
               </Card>
 
               {/* Cursor */}
-              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
                 <CardHeader>
                   <CardTitle className="text-lg">Cursor</CardTitle>
                   <CardDescription className="text-sm">AI-first code editor</CardDescription>
@@ -312,11 +325,14 @@ export default function ProjectsPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     Studying inline code suggestions, chat-based editing, and codebase understanding capabilities.
                   </p>
+                  <Badge variant="secondary" className="mt-4">
+                    Coming Soon
+                  </Badge>
                 </CardContent>
               </Card>
 
               {/* ChatGPT */}
-              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
                 <CardHeader>
                   <CardTitle className="text-lg">ChatGPT</CardTitle>
                   <CardDescription className="text-sm">Conversational AI platform</CardDescription>
@@ -325,11 +341,14 @@ export default function ProjectsPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     Breakdown of conversation design, memory management, and multi-modal interaction patterns.
                   </p>
+                  <Badge variant="secondary" className="mt-4">
+                    Coming Soon
+                  </Badge>
                 </CardContent>
               </Card>
 
               {/* Gemini */}
-              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
                 <CardHeader>
                   <CardTitle className="text-lg">Gemini</CardTitle>
                   <CardDescription className="text-sm">Google&apos;s AI assistant</CardDescription>
@@ -338,11 +357,14 @@ export default function ProjectsPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     Evaluating multi-modal capabilities, integration with Google ecosystem, and reasoning features.
                   </p>
+                  <Badge variant="secondary" className="mt-4">
+                    Coming Soon
+                  </Badge>
                 </CardContent>
               </Card>
 
               {/* NotebookLM */}
-              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
                 <CardHeader>
                   <CardTitle className="text-lg">NotebookLM</CardTitle>
                   <CardDescription className="text-sm">AI research assistant</CardDescription>
@@ -351,11 +373,14 @@ export default function ProjectsPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     Analysis of document understanding, source grounding, and knowledge synthesis workflows.
                   </p>
+                  <Badge variant="secondary" className="mt-4">
+                    Coming Soon
+                  </Badge>
                 </CardContent>
               </Card>
 
               {/* N8N */}
-              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
                 <CardHeader>
                   <CardTitle className="text-lg">N8N</CardTitle>
                   <CardDescription className="text-sm">Workflow automation platform</CardDescription>
@@ -364,11 +389,14 @@ export default function ProjectsPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     Studying AI-enhanced automation, node-based builder, and integration ecosystem design.
                   </p>
+                  <Badge variant="secondary" className="mt-4">
+                    Coming Soon
+                  </Badge>
                 </CardContent>
               </Card>
 
               {/* Replit */}
-              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow opacity-60">
                 <CardHeader>
                   <CardTitle className="text-lg">Replit</CardTitle>
                   <CardDescription className="text-sm">Collaborative coding platform</CardDescription>
@@ -377,6 +405,9 @@ export default function ProjectsPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     Examining AI agent integration, collaborative features, and deployment simplicity.
                   </p>
+                  <Badge variant="secondary" className="mt-4">
+                    Coming Soon
+                  </Badge>
                 </CardContent>
               </Card>
             </div>
