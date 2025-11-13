@@ -3,8 +3,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Mail, Phone, Linkedin, Download, Calendar } from "lucide-react"
 import Image from "next/image"
+import { InfiniteGallery } from "@/components/infinite-gallery"
 
 export default function ContactPage() {
+  const sunsetImages = [
+    "/images/sunset-train.jpg",
+    "/images/sunset-bulbs.jpg",
+    "/images/sunset-beach.jpg",
+    "/images/sunset-neighborhood.jpg",
+    "/images/sunset-architecture.jpg",
+    "/images/sunset-window.jpg",
+  ]
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -161,6 +171,10 @@ export default function ContactPage() {
             <p className="text-muted-foreground">Based in Abu Dhabi, UAE • Open to remote consulting opportunities</p>
           </div>
         </div>
+      </div>
+
+      <div className="mt-20">
+        <InfiniteGallery images={sunsetImages} />
       </div>
     </div>
   )
