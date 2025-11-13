@@ -22,33 +22,31 @@ export default function HomePage() {
                 <span className="font-medium">Product Leader in AI Agents</span>
               </div>
 
-              <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl">
-                Building GenAI-First Products That Transform Workflows
+              <h1 className="text-5xl font-bold tracking-tight text-balance sm:text-6xl md:text-7xl text-center">
+                <span className="block text-center">Apoorva Shrivastava</span>
               </h1>
 
-              <p className="text-xl text-muted-foreground text-pretty">
+              <h2 className="text-3xl font-semibold text-muted-foreground text-center lg:text-left">
+                Building GenAI-First Products That Transform Workflows
+              </h2>
+
+              <p className="text-2xl text-muted-foreground text-pretty text-center lg:text-left leading-relaxed">
                 Product leader with 7+ years shipping AI-empowered products across SaaS enterprise platforms. Expert at
                 turning flow-based systems into prompt-first agent builders.
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <Button asChild size="lg" className="group">
                   <Link href="/experience">
                     View My Work <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <a
-                    href="https://www.linkedin.com/in/apoorva-shrivastava-21a415a6/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Get in Touch
-                  </a>
+                  <Link href="/contact">Get in Touch</Link>
                 </Button>
               </div>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <span className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm">
                   <Target className="h-4 w-4 text-primary" />
                   Product Strategy

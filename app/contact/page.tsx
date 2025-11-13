@@ -2,6 +2,7 @@ import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Mail, Phone, Linkedin, Download, Calendar } from "lucide-react"
+import Image from "next/image"
 
 export default function ContactPage() {
   return (
@@ -10,7 +11,18 @@ export default function ContactPage() {
 
       <div className="container py-20">
         <div className="max-w-3xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-6">
+            <div className="flex justify-center">
+              <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
+                <Image
+                  src="/images/apoorva-contact.jpg"
+                  alt="Apoorva Shrivastava"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
             <h1 className="text-4xl font-bold">Get in Touch</h1>
             <p className="text-xl text-muted-foreground">
               I&apos;m always interested in discussing AI product strategy, consulting opportunities, or potential

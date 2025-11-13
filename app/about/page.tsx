@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Award, BookOpen, Code2, Sparkles } from "lucide-react"
+import { Award, BookOpen, Code2, Sparkles, Plane, Sparkle } from "lucide-react"
 
 export default function AboutPage() {
   return (
@@ -143,15 +143,45 @@ export default function AboutPage() {
               </div>
               <h2 className="text-2xl font-bold">Beyond Work</h2>
             </div>
-            <Card className="border-l-4 border-l-primary">
-              <CardContent className="pt-6 space-y-3">
-                <p className="text-muted-foreground leading-relaxed">
-                  I&apos;ve held coordinator roles in placement, startup relations, and co-founded a music club at IIT
-                  Patna. My experience as a radio jockey and event coordinator taught me the importance of clear
-                  communication and community building - skills that translate directly into product work.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="space-y-4">
+              <Card className="border-l-4 border-l-primary">
+                <CardContent className="pt-6 space-y-3">
+                  <p className="text-muted-foreground leading-relaxed">
+                    I&apos;ve held coordinator roles in placement, startup relations, and co-founded a music club at IIT
+                    Patna. My experience as a radio jockey and event coordinator taught me the importance of clear
+                    communication and community building - skills that translate directly into product work.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-chart-1">
+                <CardContent className="pt-6 space-y-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Plane className="h-5 w-5 text-primary" />
+                    <h3 className="font-semibold">Travel & Exploration</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    I love traveling and have been to 5 countries including USA, UAE, Sri Lanka, Georgia, and Oman.
+                    I&apos;ve also touched famous spots in over 20 states across India, constantly seeking new
+                    perspectives and experiences that enrich both my personal and professional outlook.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-chart-2">
+                <CardContent className="pt-6 space-y-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Sparkle className="h-5 w-5 text-primary" />
+                    <h3 className="font-semibold">Design Thinking in Life</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    I&apos;ve become a cleanliness freak lately and have an eye for arrangement and organization. I
+                    think this developed out of practice of looking at UI/UX cleanliness over the years, which has now
+                    become a part of my physical life just as much as my digital life.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </div>

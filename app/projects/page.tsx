@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Microscope } from "lucide-react"
 
 export default function ProjectsPage() {
   return (
@@ -251,6 +251,144 @@ export default function ProjectsPage() {
               </div>
             </CardContent>
           </Card>
+
+          {/* AI Product Teardowns */}
+          <div className="pt-12 border-t-2 border-primary/20">
+            <div className="flex items-center gap-3 mb-8">
+              <Microscope className="h-8 w-8 text-primary" />
+              <div>
+                <h2 className="text-3xl font-bold">AI Product Teardowns</h2>
+                <p className="text-muted-foreground">Analyzing the best AI products in the market</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Gamma */}
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">Gamma</CardTitle>
+                  <CardDescription className="text-sm">AI-powered presentation builder</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Deep analysis of prompt-to-presentation flow, template system, and collaboration features.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* V0 */}
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">V0</CardTitle>
+                  <CardDescription className="text-sm">Generative UI by Vercel</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Examining code generation patterns, component architecture, and iterative refinement mechanics.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Lovable */}
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">Lovable</CardTitle>
+                  <CardDescription className="text-sm">AI full-stack app builder</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Analysis of end-to-end app generation, deployment flow, and developer experience.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Cursor */}
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">Cursor</CardTitle>
+                  <CardDescription className="text-sm">AI-first code editor</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Studying inline code suggestions, chat-based editing, and codebase understanding capabilities.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* ChatGPT */}
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">ChatGPT</CardTitle>
+                  <CardDescription className="text-sm">Conversational AI platform</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Breakdown of conversation design, memory management, and multi-modal interaction patterns.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Gemini */}
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">Gemini</CardTitle>
+                  <CardDescription className="text-sm">Google&apos;s AI assistant</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Evaluating multi-modal capabilities, integration with Google ecosystem, and reasoning features.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* NotebookLM */}
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">NotebookLM</CardTitle>
+                  <CardDescription className="text-sm">AI research assistant</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Analysis of document understanding, source grounding, and knowledge synthesis workflows.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* N8N */}
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">N8N</CardTitle>
+                  <CardDescription className="text-sm">Workflow automation platform</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Studying AI-enhanced automation, node-based builder, and integration ecosystem design.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Replit */}
+              <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">Replit</CardTitle>
+                  <CardDescription className="text-sm">Collaborative coding platform</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Examining AI agent integration, collaborative features, and deployment simplicity.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-8 p-6 bg-muted/50 rounded-lg">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                These teardowns represent my continuous learning approach to understanding AI product design patterns,
+                UX decisions, and market positioning. Each analysis informs how I approach product strategy and feature
+                prioritization.
+              </p>
+            </div>
+          </div>
 
           {/* CTA */}
           <Card className="bg-muted/50">

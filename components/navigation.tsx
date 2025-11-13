@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
+import { Logo } from "@/components/logo"
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -18,9 +19,9 @@ export function Navigation() {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="text-lg font-semibold">
-          Apoorva Shrivastava
+      <div className="container flex h-16 items-center justify-center gap-8">
+        <Link href="/" className="flex items-center">
+          <Logo />
         </Link>
         <div className="flex gap-6">
           {navItems.map((item) => (
