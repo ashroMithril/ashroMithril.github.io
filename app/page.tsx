@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
@@ -5,79 +7,117 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { StatCard } from "@/components/stat-card"
 import { ArrowRight, Sparkles, Users, Rocket, Brain, Zap, Target, TrendingUp, Globe, Shield } from "lucide-react"
+import { useEffect, useState } from "react"
 
 export default function HomePage() {
+  const [scrollY, setScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const imageScale = Math.max(0.7, 1 - scrollY * 0.0005)
+  const imageTranslateZ = Math.min(200, scrollY * 0.5) // Move image backwards (into the screen)
+  const nameScale = Math.max(0.5, 1 - scrollY * 0.002)
+  const imageOpacity = Math.max(0.3, 1 - scrollY * 0.001)
+
   return (
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <section className="py-20 md:py-32 relative">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 bg-primary/5 px-4 py-1.5 text-sm">
-                <Sparkles className="h-4 w-4 text-primary" />
-                <span className="font-medium">Product Leader in AI Agents</span>
-              </div>
-
-              <h1 className="text-5xl font-bold tracking-tight text-balance sm:text-6xl md:text-7xl text-center">
-                <span className="block text-center">Apoorva Shrivastava</span>
-              </h1>
-
-              <h2 className="text-3xl font-semibold text-muted-foreground text-center lg:text-left">
-                Building GenAI-First Products That Transform Workflows
-              </h2>
-
-              <p className="text-2xl text-muted-foreground text-pretty text-center lg:text-left leading-relaxed">
-                Product leader with 7+ years shipping AI-empowered products across SaaS enterprise platforms. Expert at
-                turning flow-based systems into prompt-first agent builders.
-              </p>
-
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <Button asChild size="lg" className="group">
-                  <Link href="/experience">
-                    View My Work <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/contact">Get in Touch</Link>
-                </Button>
-              </div>
-
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <span className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm">
-                  <Target className="h-4 w-4 text-primary" />
-                  Product Strategy
-                </span>
-                <span className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm">
-                  <Brain className="h-4 w-4 text-primary" />
-                  GenAI & Agents
-                </span>
-                <span className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm">
-                  <TrendingUp className="h-4 w-4 text-primary" />
-                  PLG & Growth
-                </span>
-                <span className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm">
-                  <Globe className="h-4 w-4 text-primary" />
-                  Integrations
-                </span>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl blur-2xl" />
-              <div className="relative border-4 border-primary/10 rounded-xl overflow-hidden shadow-2xl">
+      {/* Hero Section with Animated Background Image */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 flex items-center justify-center z-0"
+          style={{
+            transform: `scale(${imageScale}) perspective(1200px) translateZ(-${imageTranslateZ}px)`,
+            opacity: imageOpacity,
+            transition: "transform 0.1s ease-out, opacity 0.1s ease-out",
+          }}
+        >
+          <div className="relative w-[90vw] h-[90vh] max-w-6xl">
+            <div className="absolute inset-0 bg-white rounded-3xl shadow-2xl">
+              <div className="absolute inset-4 overflow-hidden rounded-2xl">
                 <Image
                   src="/images/apoorva-profile.jpg"
                   alt="Apoorva Shrivastava - Product Leader"
-                  width={600}
-                  height={600}
-                  className="relative"
+                  fill
+                  className="object-cover"
                   priority
                 />
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="relative z-10 text-center space-y-4"
+          style={{
+            transform: `scale(${nameScale})`,
+            transition: "transform 0.1s ease-out",
+          }}
+        >
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white drop-shadow-2xl">
+            Apoorva Shrivastava
+          </h1>
+          <div className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-md px-6 py-3 text-lg">
+            <Sparkles className="h-5 w-5 text-white" />
+            <span className="font-medium text-white">Product Leader in AI Agents</span>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
+            <div className="w-1 h-2 bg-white/50 rounded-full" />
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Introduction Section */}
+        <section className="py-20 relative">
+          <div className="text-center space-y-8 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold">Building GenAI-First Products That Transform Workflows</h2>
+
+            <p className="text-2xl text-muted-foreground leading-relaxed">
+              Product leader with 7+ years shipping AI-empowered products across SaaS enterprise platforms. Expert at
+              turning flow-based systems into prompt-first agent builders.
+            </p>
+
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="group">
+                <Link href="/experience">
+                  View My Work <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/contact">Get in Touch</Link>
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap gap-3 justify-center">
+              <span className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm">
+                <Target className="h-4 w-4 text-primary" />
+                Product Strategy
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm">
+                <Brain className="h-4 w-4 text-primary" />
+                GenAI & Agents
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm">
+                <TrendingUp className="h-4 w-4 text-primary" />
+                PLG & Growth
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm">
+                <Globe className="h-4 w-4 text-primary" />
+                Integrations
+              </span>
             </div>
           </div>
         </section>
