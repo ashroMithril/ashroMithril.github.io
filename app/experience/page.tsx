@@ -10,10 +10,10 @@ export default function ExperiencePage() {
       <div className="min-h-screen">
         <Navigation />
 
-        <div className="container py-20 relative">
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="space-y-12">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 border border-primary/20">

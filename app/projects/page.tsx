@@ -14,8 +14,8 @@ export default function ProjectsPage() {
         <div className="relative z-10">
           <Navigation />
 
-          <div className="container py-20">
-            <div className="max-w-5xl mx-auto space-y-12">
+          <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="space-y-12">
               <div>
                 <h1 className="text-4xl font-bold mb-4">Projects & Case Studies</h1>
                 <p className="text-xl text-muted-foreground">

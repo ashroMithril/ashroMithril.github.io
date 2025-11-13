@@ -79,7 +79,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Introduction Section */}
         <section className="py-20 relative">
           <div className="text-center space-y-8 max-w-4xl mx-auto">

@@ -23,10 +23,10 @@ export default function AboutPage() {
       <div className="min-h-screen">
         <Navigation />
 
-        <div className="container py-20 relative">
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="space-y-12">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold">About Me</h1>
               <p className="text-xl text-muted-foreground text-pretty">

@@ -44,7 +44,7 @@ export default function PersonalPage() {
   return (
     <>
       <Navigation />
-      <div className="container py-12">
+      <div className="container py-12 pt-24">
         <div className="mx-auto max-w-5xl">
           {/* Header Section */}
           <div className="mb-12 text-center">
