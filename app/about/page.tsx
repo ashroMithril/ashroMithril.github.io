@@ -16,11 +16,40 @@ export default function AboutPage() {
           <div className="space-y-12">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold">About Me</h1>
-              <p className="text-xl text-muted-foreground text-pretty">
-                Hi, I&apos;m Apoorva. I craft product roadmaps and ship AI-first experiences that help companies
-                automate complex customer journeys and unlock new revenue streams.
-              </p>
             </div>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4">
+                <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
+                  Hi, I&apos;m Apoorva. I craft product roadmaps and ship AI-first experiences that help companies
+                  automate complex customer journeys and unlock new revenue streams.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  I started out in research and molecular simulations, then moved into enterprise product roles where I
+                  learned to balance rigor with speed. I love solving product problems end-to-end - from hypothesis and
+                  metrics to UX and go-to-market.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Currently, I&apos;m leading the transformation of flow-based automation platforms into conversational,
+                  prompt-first agent experiences. This involves rethinking how both technical and non-technical users
+                  interact with AI, building robust prompting layers, and enabling multimodal interactions that work
+                  across channels.
+                </p>
+              </div>
+
+              <div className="w-full rounded-2xl overflow-hidden border-4 border-white shadow-2xl">
+                <video
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6576-jnNKAxNefGCxOdFL1SzARLmBJJzHU5.mov"
+                  className="w-full h-auto"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                />
+              </div>
+            </div>
+            {/* </CHANGE> */}
 
             <div>
               <div className="flex items-center gap-2 mb-6">
@@ -29,109 +58,87 @@ export default function AboutPage() {
                 </div>
                 <h2 className="text-2xl font-bold">Core Strengths</h2>
               </div>
-              <div className="relative">
-                {/* Video Background */}
-                <div className="absolute inset-0 -z-10 overflow-hidden rounded-2xl">
-                  <video
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6572-gYYSsS9c4eU2L5WXyrOAgdQSIZyjfk.mov"
-                    className="w-full h-full object-cover opacity-20"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  />
-                  <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" />
-                </div>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <Card className="group hover:border-primary transition-all hover:shadow-lg">
+                  <CardContent className="pt-6 space-y-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
+                      <Brain className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-semibold text-lg">Problem Solving</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Strategic thinking to solve complex product challenges end-to-end
+                    </p>
+                  </CardContent>
+                </Card>
 
-                {/* Grid Content */}
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 relative">
-                  <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                    <CardContent className="pt-6 space-y-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                        <Brain className="h-6 w-6" />
-                      </div>
-                      <h3 className="font-semibold text-lg">Problem Solving</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Strategic thinking to solve complex product challenges end-to-end
-                      </p>
-                    </CardContent>
-                  </Card>
+                <Card className="group hover:border-primary transition-all hover:shadow-lg">
+                  <CardContent className="pt-6 space-y-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
+                      <Layers className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-semibold text-lg">Product Roadmap Planning</h3>
+                    <p className="text-sm text-muted-foreground">
+                      0-1 and 1-10 scaling expertise with data-driven strategy
+                    </p>
+                  </CardContent>
+                </Card>
 
-                  <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                    <CardContent className="pt-6 space-y-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                        <Layers className="h-6 w-6" />
-                      </div>
-                      <h3 className="font-semibold text-lg">Product Roadmap Planning</h3>
-                      <p className="text-sm text-muted-foreground">
-                        0-1 and 1-10 scaling expertise with data-driven strategy
-                      </p>
-                    </CardContent>
-                  </Card>
+                <Card className="group hover:border-primary transition-all hover:shadow-lg">
+                  <CardContent className="pt-6 space-y-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
+                      <Target className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-semibold text-lg">Data Analysis & Metrics</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Metrics-driven decision making with focus on user impact
+                    </p>
+                  </CardContent>
+                </Card>
 
-                  <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                    <CardContent className="pt-6 space-y-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                        <Target className="h-6 w-6" />
-                      </div>
-                      <h3 className="font-semibold text-lg">Data Analysis & Metrics</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Metrics-driven decision making with focus on user impact
-                      </p>
-                    </CardContent>
-                  </Card>
+                <Card className="group hover:border-primary transition-all hover:shadow-lg">
+                  <CardContent className="pt-6 space-y-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
+                      <Users className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-semibold text-lg">Cross-Functional Leadership</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Leading diverse teams to ship complex AI-powered products
+                    </p>
+                  </CardContent>
+                </Card>
 
-                  <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                    <CardContent className="pt-6 space-y-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                        <Users className="h-6 w-6" />
-                      </div>
-                      <h3 className="font-semibold text-lg">Cross-Functional Leadership</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Leading diverse teams to ship complex AI-powered products
-                      </p>
-                    </CardContent>
-                  </Card>
+                <Card className="group hover:border-primary transition-all hover:shadow-lg">
+                  <CardContent className="pt-6 space-y-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
+                      <Sparkles className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-semibold text-lg">User Experience Focus</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Crafting intuitive interfaces for technical and non-technical users
+                    </p>
+                  </CardContent>
+                </Card>
 
-                  <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                    <CardContent className="pt-6 space-y-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                        <Sparkles className="h-6 w-6" />
-                      </div>
-                      <h3 className="font-semibold text-lg">User Experience Focus</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Crafting intuitive interfaces for technical and non-technical users
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                    <CardContent className="pt-6 space-y-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                        <TrendingUp className="h-6 w-6" />
-                      </div>
-                      <h3 className="font-semibold text-lg">Strategic Planning</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Execution excellence from hypothesis to go-to-market
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
+                <Card className="group hover:border-primary transition-all hover:shadow-lg">
+                  <CardContent className="pt-6 space-y-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
+                      <TrendingUp className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-semibold text-lg">Strategic Planning</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Execution excellence from hypothesis to go-to-market
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
 
             <Card className="border-l-4 border-l-primary">
               <CardContent className="pt-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  I started out in research and molecular simulations, then moved into enterprise product roles where I
-                  learned to balance rigor with speed. I love solving product problems end-to-end - from hypothesis and
-                  metrics to UX and go-to-market.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Currently, I&apos;m leading the transformation of flow-based automation platforms into conversational,
-                  prompt-first agent experiences. This involves rethinking how both technical and non-technical users
-                  interact with AI, building robust prompting layers, and enabling multimodal interactions that work
-                  across channels.
+                  With 7+ years in SaaS and product, I&apos;ve independently driven multiple 0-1 and 1-10 products,
+                  from freemium growth programs to complex integration marketplaces. My approach combines technical
+                  depth with strategic product thinking to deliver measurable business impact.
                 </p>
               </CardContent>
             </Card>
