@@ -6,11 +6,12 @@ import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { StatCard } from "@/components/stat-card"
-import { ArrowRight, Sparkles, Users, Brain, Target, TrendingUp, Globe, Layers, Lightbulb } from "lucide-react"
+import { ArrowRight, Sparkles, Users, Brain, Target, TrendingUp, Globe, Layers, Lightbulb } from 'lucide-react'
 import { useEffect, useState } from "react"
 
 export default function HomePage() {
   const [scrollY, setScrollY] = useState(0)
+  const [videoError, setVideoError] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +31,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section with Animated Background Image */}
+      {/* Hero Section with Animated Background Video/Image */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 flex items-center justify-center z-0"
@@ -43,13 +44,25 @@ export default function HomePage() {
           <div className="relative w-[90vw] h-[90vh] max-w-6xl">
             <div className="absolute inset-0 bg-white rounded-3xl shadow-2xl">
               <div className="absolute inset-4 overflow-hidden rounded-2xl">
-                <Image
-                  src="/images/apoorva-profile.jpg"
-                  alt="Apoorva Shrivastava - Product Leader"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+                {!videoError ? (
+                  <video
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3289-zUf3JyNeUnmGWdK8NQzRcjKXhkaEZz.mov"
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    onError={() => setVideoError(true)}
+                  />
+                ) : (
+                  <Image
+                    src="/images/apoorva-profile.jpg"
+                    alt="Apoorva Shrivastava - Product Leader"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -228,7 +241,7 @@ export default function HomePage() {
         <section className="border-t-2 bg-muted/30 py-20 relative -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
           <div className="container text-center space-y-6">
-            <h2 className="text-3xl font-bold">Ready to Work Together?</h2>
+            <h2 className="text-3xl font-bold">Ready to Chat?</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               I design GenAI-first products that convert automation into measurable business outcomes.
             </p>
