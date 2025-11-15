@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ArrowRight, Microscope } from "lucide-react"
+import { ArrowRight, Microscope } from 'lucide-react'
 
 export default function ProjectsPage() {
   return (
@@ -254,6 +254,292 @@ export default function ProjectsPage() {
                     <Badge variant="secondary">Payments</Badge>
                     <Badge variant="secondary">Revenue</Badge>
                     <Badge variant="secondary">Automation</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Agent Assist */}
+              <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Customizable Agent Assist Platform</CardTitle>
+                  <CardDescription className="text-base">
+                    Real-time AI assistance for support agents across Yellow.ai and third-party CRMs
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-semibold mb-2">Overview</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Productized a fully customizable agent-assist layer that plugs into Yellow.ai and third-party CRMs 
+                        (Salesforce, Zendesk, ServiceNow) via lightweight connector SDKs and webhook APIs.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Key Features</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Multilayer suggestion engine with configurable confidence thresholds for auto-apply vs. soft suggestions
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Inline UI overlay and agent sidebar supporting rich cards, attachments, and one-click CRM actions
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Human-in-the-loop controls: whisper mode, suggested-reply approval, editable responses, and audit logs
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Security features: RBAC, PII redaction, session encryption, and configurable data residency
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Partner SDK ecosystem with sample apps and certification program reducing integration time by 60%
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Impact</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Pilot deployments reported 25-40% reduction in average handle time and 10-20 point improvement in 
+                        agent satisfaction, enabling enterprise customers to realize significant cost savings through higher 
+                        automation confidence.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <Badge>AI Assistance</Badge>
+                    <Badge>CRM Integration</Badge>
+                    <Badge>Real-time</Badge>
+                    <Badge>Compliance</Badge>
+                    <Badge>Partner SDKs</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Email Automation for Support - Multithreaded, Multimodal Orchestration */}
+              <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Email Automation for Support - Multithreaded, Multimodal Orchestration</CardTitle>
+                  <CardDescription className="text-base">
+                    Enterprise-grade email automation with multithreaded conversations and multimodal understanding
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-semibold mb-2">Product Scope</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Built an enterprise-grade email automation module focused on support workflows. 
+                        Enabled automated inbound ticket ingestion, thread stitching, and thread-level state so a single 
+                        customer can have multiple concurrent conversations (billing, technical, escalation) without context loss.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Multimodal Understanding</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Implemented multimodal understanding: parsed attachments (PDF, images), extracted text via OCR, 
+                        ingested voicemail-to-transcript, and combined with email body semantics to produce a unified 
+                        conversation representation for NLU and retrieval.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Key Features</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Confidence-based routing and triage: auto-classify and route threads to bots, specialized queues, or human agents
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Automation primitives: templated and editable suggested replies, auto-resolution flows, multi-step action cards
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          SLA and lifecycle controls: per-thread SLAs, retry/backoff for delivery failures, suppression and deduplication logic
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Integrations: native connectors for ticketing systems (Zendesk, ServiceNow), CRM sync for contact identity resolution
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Security and compliance: PII redaction at ingestion, encrypted storage, consent-aware transcript handling, audit logs
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Outcomes</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Pilot deployments showed automated triage and multithread handling reduced manual routing and follow-ups, 
+                        improving SLA adherence and first-time resolution in pilot customers.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <Badge>Email Automation</Badge>
+                    <Badge>Multimodal AI</Badge>
+                    <Badge>Support Workflows</Badge>
+                    <Badge>Thread Management</Badge>
+                    <Badge>Compliance</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Omnichannel Platform */}
+              <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Multithreaded, Multimodal Omnichannel Platform</CardTitle>
+                  <CardDescription className="text-base">
+                    True omnichannel architecture with unified conversation continuity across all channels
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-semibold mb-2">Core Architecture</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Architected the core omnichannel model: unified conversation ID, per-channel events store, and 
+                        thread-level state so users can seamlessly continue any thread across email, chat, voice, and 
+                        attachments without losing context.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Multimodal NLU Stack</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Merged embeddings from text, OCR, and voice transcripts into a single semantic layer enabling 
+                        cross-modal retrieval, intent detection, and similarity search for rapid KB responses.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Key Capabilities</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Channel continuity and session transfer: single-session continuity for chat-to-voice and email-to-chat handoffs
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Session transfer APIs, conversation reconciliation, and conflict resolution to avoid duplicated actions
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Thread-level telemetry, SLA heatmaps, inbox views for multithread queues
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Automated alerts for threads nearing SLA breaches or needing human review
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Enterprise controls: feature flags per-channel, policy-driven routing, RBAC, tenant-level configuration
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Business Impact</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Enabled truly omnichannel support journeys that reduce customer friction, reduce redundant follow-ups, 
+                        and let automation operate safely at thread granularity. Customers can run concurrent threads across 
+                        multiple channels while preserving context, SLAs, and compliance.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <Badge>Omnichannel</Badge>
+                    <Badge>Thread Management</Badge>
+                    <Badge>Multimodal NLU</Badge>
+                    <Badge>Session Transfer</Badge>
+                    <Badge>Enterprise Architecture</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Chat + Voice Widget */}
+              <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Functional Chat + Voice Widget for Enterprises</CardTitle>
+                  <CardDescription className="text-base">
+                    Unified omnichannel widget with seamless chat-to-voice continuity
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-semibold mb-2">Product Vision</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Led design and release of a unified enterprise chat+voice widget (web + mobile) with single-session 
+                        continuity so users can switch channels without losing context (chat → voice → chat). Implemented via 
+                        WebRTC with robust carrier fallback and SIP integration for legacy telephony.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Feature Set</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Proactive messaging, co-browse, file transfer, rich card actions (payments, forms)
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Callback scheduling, voicemail-to-transcript, agent whisper/coaching, soft handoff
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Local language TTS/STT, themeable design, A11y-compliant, custom branding support
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Developer-first: single NPM/SDK bundle, embeddable iframe, one-line install for rapid POC
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Quality & Reliability</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Adaptive bitrate, jitter buffering, QoS signals with automatic codec fallback to preserve call quality 
+                        on poor networks. Built telemetry dashboard for real-time call quality, latency, and session health.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Enterprise Controls</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Call recording opt-in, consent flows, PII masking at ingestion, SSO, SAML, and fine-grained RBAC for 
+                        widget features.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Impact</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Reduced time-to-integrate voice channels from weeks to days for enterprise clients, improved containment 
+                        and CSAT in omnichannel journeys, and increased usage of self-serve flows via rich actions.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <Badge>Omnichannel</Badge>
+                    <Badge>WebRTC</Badge>
+                    <Badge>Voice</Badge>
+                    <Badge>Widget SDK</Badge>
+                    <Badge>Enterprise</Badge>
                   </div>
                 </CardContent>
               </Card>
