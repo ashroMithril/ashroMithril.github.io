@@ -271,7 +271,7 @@ export default function ProjectsPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Overview</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Productized a fully customizable agent-assist layer that plugs into Yellow.ai and third-party CRMs 
+                        Productized a fully customizable agent-assist layer that plugs into Yellow.ai and third-party CRMs
                         (Salesforce, Zendesk, ServiceNow) via lightweight connector SDKs and webhook APIs.
                       </p>
                     </div>
@@ -305,8 +305,8 @@ export default function ProjectsPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Impact</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Pilot deployments reported 25-40% reduction in average handle time and 10-20 point improvement in 
-                        agent satisfaction, enabling enterprise customers to realize significant cost savings through higher 
+                        Pilot deployments reported 25-40% reduction in average handle time and 10-20 point improvement in
+                        agent satisfaction, enabling enterprise customers to realize significant cost savings through higher
                         automation confidence.
                       </p>
                     </div>
@@ -327,60 +327,69 @@ export default function ProjectsPage() {
                 <CardHeader>
                   <CardTitle className="text-2xl">Email Automation for Support - Multithreaded, Multimodal Orchestration</CardTitle>
                   <CardDescription className="text-base">
-                    Enterprise-grade email automation with multithreaded conversations and multimodal understanding
+                    80%+ resolution rate within 1 week of launch, driving 30% of annual revenue
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="space-y-4">
                     <div>
-                      <h3 className="font-semibold mb-2">Product Scope</h3>
+                      <h3 className="font-semibold mb-2">Context & Role</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Built an enterprise-grade email automation module focused on support workflows. 
-                        Enabled automated inbound ticket ingestion, thread stitching, and thread-level state so a single 
-                        customer can have multiple concurrent conversations (billing, technical, escalation) without context loss.
+                        Automate support conversations over email - one of the most used channels by enterprise support systems. Over 50% of support conversations were either happening in email directly or converted into email tickets from support portals. Led as PM with one senior dev for MVP, then 2 SDEs, designer, and shared QA for full product.
                       </p>
                     </div>
 
                     <div>
-                      <h3 className="font-semibold mb-2">Multimodal Understanding</h3>
+                      <h3 className="font-semibold mb-2">Problem & Opportunity</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Implemented multimodal understanding: parsed attachments (PDF, images), extracted text via OCR, 
-                        ingested voicemail-to-transcript, and combined with email body semantics to produce a unified 
-                        conversation representation for NLU and retrieval.
+                        Huge bulky emails with massive volumes - companies with 100 agents and 50k monthly tickets ended up with 500 emails per agent. This led to delayed responses, inconsistent handling, and poor customer experience. Before LLMs, extracting entities from emails was nearly impossible.
                       </p>
                     </div>
 
                     <div>
-                      <h3 className="font-semibold mb-2">Key Features</h3>
+                      <h3 className="font-semibold mb-2">Constraints & Hypothesis</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Half a quarter to experiment and prove results or discontinue. Competitor research showed this wasn&apos;t a proven use case yet. User interviews revealed additional needs: analytics on emails, no full automation initially - just analytics and draft email responses for agents. Hypothesis: KB-based automation could achieve 80%+ resolution rate.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Actions Taken</h3>
                       <ul className="space-y-2 text-sm text-muted-foreground">
                         <li className="flex gap-2">
                           <span className="text-primary">→</span>
-                          Confidence-based routing and triage: auto-classify and route threads to bots, specialized queues, or human agents
+                          Built MVP in one month: KB-based automation tackling huge multi-intent emails, noise clearing, segmenting
                         </li>
                         <li className="flex gap-2">
                           <span className="text-primary">→</span>
-                          Automation primitives: templated and editable suggested replies, auto-resolution flows, multi-step action cards
+                          Added multi-thread responses, API-based responses, sentiment analysis, draft creation
                         </li>
                         <li className="flex gap-2">
                           <span className="text-primary">→</span>
-                          SLA and lifecycle controls: per-thread SLAs, retry/backoff for delivery failures, suppression and deduplication logic
+                          Implemented reading attachments with OCR, transfer to agents functionality
                         </li>
                         <li className="flex gap-2">
                           <span className="text-primary">→</span>
-                          Integrations: native connectors for ticketing systems (Zendesk, ServiceNow), CRM sync for contact identity resolution
+                          Designed minimalistic setup UI to fit into existing flow builder for enterprise builders
                         </li>
                         <li className="flex gap-2">
                           <span className="text-primary">→</span>
-                          Security and compliance: PII redaction at ingestion, encrypted storage, consent-aware transcript handling, audit logs
+                          Launched marketing campaigns specifically for email automation
                         </li>
                       </ul>
                     </div>
 
                     <div>
-                      <h3 className="font-semibold mb-2">Outcomes</h3>
+                      <h3 className="font-semibold mb-2">Results & Impact</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Pilot deployments showed automated triage and multithread handling reduced manual routing and follow-ups, 
-                        improving SLA adherence and first-time resolution in pilot customers.
+                        <strong className="text-foreground">Achieved 80%+ resolution rate within 1 week of launch.</strong> Secured first million-dollar deals signed. Today, approximately <strong className="text-foreground">30% of company revenue</strong> comes from this channel. Feature set expanded to include multi-thread handling, multi-intent processing, OCR for attachments, and seamless agent handoffs.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Learnings & Next Steps</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        User research uncovered that customers initially wanted analytics and drafting rather than full automation. Starting with KB-based automation proved the concept quickly, then iteratively added multimodal capabilities. The minimalistic setup approach ensured adoption by fitting into existing workflows rather than requiring separate training.
                       </p>
                     </div>
                   </div>
@@ -388,14 +397,328 @@ export default function ProjectsPage() {
                   <div className="flex flex-wrap gap-2">
                     <Badge>Email Automation</Badge>
                     <Badge>Multimodal AI</Badge>
-                    <Badge>Support Workflows</Badge>
+                    <Badge>80%+ Resolution</Badge>
+                    <Badge>30% Revenue Driver</Badge>
                     <Badge>Thread Management</Badge>
-                    <Badge>Compliance</Badge>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Omnichannel Platform */}
+              {/* Orchestrator LLM */}
+              <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Orchestrator LLM - Conversation Experience Revolution</CardTitle>
+                  <CardDescription className="text-base">
+                    Increased deflection rate from 60% to 80%+, now powering 100% of platform bots
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-semibold mb-2">Context & Role</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Led the technology shift from NLP to LLM-based workflow identification to dramatically improve conversation quality and ticket deflection rates. This was a platform-wide transformation affecting all customer bots.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Problem & Opportunity</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Around 40%+ undeflected tickets were going to fallback due to poor intent identification, inability to handle context switching, and irrelevant small talk responses. Analysis of multiple bot conversations revealed massive UX gaps: flows didn&apos;t switch properly, buttons for switching were almost impossible in current setup, and small talk responses were horribly irrelevant to conversation context.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Constraints & Hypothesis</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Timing coincided with ChatGPT launch, which demonstrated enormous power for creating personalized conversations. Instead of building a complex design mode for business analysts, hypothesized that LLM-based orchestration could handle intent identification, context switching, and personalized small talk automatically.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Actions Taken</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Interviewed analysts and implementation engineers, documenting UX failures with screenshots
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Prioritized intent identification and relevant small talk identification as most critical
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Designed Dynamic Chat Node as another node in existing builder for quick deployment
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Built Orchestrator LLM layer to intelligently route between intents and handle context
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Shipped initial version in weeks by leveraging existing node architecture
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Results & Impact</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        <strong className="text-foreground">Increased deflection rate to 80%+ from existing 60%.</strong> Saw immediate increase in customer CSAT scores and brand NPS. Today, <strong className="text-foreground">100% of platform bots run on Orchestrator LLM</strong> - both old bots migrated from NLP and all new bots built on this foundation.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Learnings & Next Steps</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        The combination of Dynamic Chat Node for personalized messaging and Orchestrator LLM for intelligent routing created a step-function improvement in conversation quality. Rapid deployment by fitting into existing node architecture accelerated adoption and reduced training requirements.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <Badge>Orchestrator LLM</Badge>
+                    <Badge>80%+ Deflection</Badge>
+                    <Badge>NLP → LLM Migration</Badge>
+                    <Badge>Platform-wide</Badge>
+                    <Badge>CSAT Improvement</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Templatized Integration Framework & Marketplace Scale */}
+              <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Templatized Integration Framework & Marketplace Scale</CardTitle>
+                  <CardDescription className="text-base">
+                    Scaled from manual integrations to 70+ marketplace products with wrapper-based approach
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-semibold mb-2">Context & Role</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Led the creation of templatized integration framework and marketplace product roadmap to enable rapid integration additions across CRM, Payments, Notifications, Live Agent, and third-party Agent Assist platforms.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Problem & Opportunity</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Every new integration required custom development work, limiting quantity and speed of integration additions needed for enterprise growth across different customer segments. Customers needed to connect AI agents to existing business systems to drive real outcomes.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Actions Taken</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Designed wrapper-based integration approach to templatize new integration additions
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Built integration action node with search-based entity addition for ease of use
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Implemented automated authentication to reduce integration failure rates
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Added multi-account integration support for enterprises with segmented support tools
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Created marketplace UI and prioritization framework based on customer demand
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Results & Impact</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Dramatically reduced time to add new integrations through templatized approach. Enabled support for bigger enterprises with multiple accounts for different customer segments. Launched 70+ integrations covering Notifications, Live Agent systems, Payments, CRM, and Agent Assist for third parties.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Learnings & Next Steps</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Wrapper-based templatization was key to scaling integration quantity. Automated authentication significantly reduced failure rates and improved customer experience. Multi-account support opened up larger enterprise opportunities.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <Badge>Integrations</Badge>
+                    <Badge>70+ Products</Badge>
+                    <Badge>Templatized Framework</Badge>
+                    <Badge>Multi-account</Badge>
+                    <Badge>Enterprise Scale</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Payments Automation */}
+              <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Payments Automation - Strategic Revenue Infrastructure</CardTitle>
+                  <CardDescription className="text-base">
+                    500 demo requests and 50+ direct upgrade requests monthly drove automated payment system
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-semibold mb-2">Context & Role</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Led strategic decision and full execution to add automated payment collection mechanism across the platform. Worked with finance team, partner billing POCs, and paying customers to understand current process and design optimal flows.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Problem & Opportunity</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        With 500 demo requests and around 50 direct requests to upgrade and pay per month, manual payment processes were creating bottlenecks. Main challenges: tracking paid vs unpaid bots, linking paid subscriptions for smaller payments, managing partner billing, and getting pricing/packaging right for every region.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Constraints & Hypothesis</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Manual payments through PO billing went through multiple touchpoints, slowing conversion. Hypothesis: automated mechanism would significantly reduce friction and improve conversion rates, especially for SME brands and partner channels.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Actions Taken</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Conducted user research with finance team, partner billing POCs, and paying customers
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Built POC using direct link sharing to validate approach before full integration
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Solved pricing and packaging complexity across different regions and customer segments
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          {'Integrated platform > subscription > bots to Salesforce to backend to NetSuite, Stripe, etc.'}
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Maintained manual PO billing path for enterprise customers requiring it
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Results & Impact</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Successfully automated payment collection for high-volume smaller transactions while maintaining enterprise PO workflows. Enabled tracking of paid/unpaid bots with subscription linkage. Reduced payment friction for SME and partner segments.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Learnings & Next Steps</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Regional pricing/packaging complexity was the biggest challenge. POC validation before full integration prevented costly mistakes. Maintaining dual paths (automated + manual PO) served different customer segments effectively.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <Badge>Payments Automation</Badge>
+                    <Badge>500+ Monthly Demos</Badge>
+                    <Badge>Multi-region Pricing</Badge>
+                    <Badge>Subscription Management</Badge>
+                    <Badge>Revenue Infrastructure</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Onboarding + Marketplace for Product-Led Growth */}
+              <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Onboarding + Marketplace for Product-Led Growth</CardTitle>
+                  <CardDescription className="text-base">
+                    Strategic shift from sales-led to product-led growth for long-term scalability
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-semibold mb-2">Context & Role</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Led strategy to transition company from mostly sales-led with longer sales cycles to product-led sales and product-led growth motion. This was needed for long-term sustainable growth.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Problem & Opportunity</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Company relied heavily on sales-led motion with longer cycles. To scale efficiently and reduce customer acquisition costs, needed self-serve path that would convert inbound interest into paying customers without sales intervention.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Actions Taken</h3>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Designed freemium tier with strategic feature gating to drive upgrades
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Created optimized onboarding flows focused on rapid time-to-value
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Built marketplace to showcase integrations and accelerate customer value realization
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Implemented analytics to track conversion funnels and identify drop-off points
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary">→</span>
+                          Added trial mechanics with clear upgrade prompts at friction points
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Results & Impact</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        <strong className="text-foreground">Achieved 5% conversion rate</strong> from inbound traffic to paying customers, seeding ongoing PLG motion for the platform. Significantly reduced customer acquisition costs while maintaining deal quality.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2">Learnings & Next Steps</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Time-to-value focus in onboarding was critical to conversion. Marketplace showcase helped customers understand integration possibilities quickly. Analytics-driven iteration on funnel drop-offs continuously improved conversion rates.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <Badge>PLG Strategy</Badge>
+                    <Badge>5% Conversion</Badge>
+                    <Badge>Freemium</Badge>
+                    <Badge>Marketplace</Badge>
+                    <Badge>Growth</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Multithreaded, Multimodal Omnichannel Platform */}
               <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500">
                 <CardHeader>
                   <CardTitle className="text-2xl">Multithreaded, Multimodal Omnichannel Platform</CardTitle>
@@ -408,8 +731,8 @@ export default function ProjectsPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Core Architecture</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Architected the core omnichannel model: unified conversation ID, per-channel events store, and 
-                        thread-level state so users can seamlessly continue any thread across email, chat, voice, and 
+                        Architected the core omnichannel model: unified conversation ID, per-channel events store, and
+                        thread-level state so users can seamlessly continue any thread across email, chat, voice, and
                         attachments without losing context.
                       </p>
                     </div>
@@ -417,7 +740,7 @@ export default function ProjectsPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Multimodal NLU Stack</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Merged embeddings from text, OCR, and voice transcripts into a single semantic layer enabling 
+                        Merged embeddings from text, OCR, and voice transcripts into a single semantic layer enabling
                         cross-modal retrieval, intent detection, and similarity search for rapid KB responses.
                       </p>
                     </div>
@@ -451,8 +774,8 @@ export default function ProjectsPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Business Impact</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Enabled truly omnichannel support journeys that reduce customer friction, reduce redundant follow-ups, 
-                        and let automation operate safely at thread granularity. Customers can run concurrent threads across 
+                        Enabled truly omnichannel support journeys that reduce customer friction, reduce redundant follow-ups,
+                        and let automation operate safely at thread granularity. Customers can run concurrent threads across
                         multiple channels while preserving context, SLAs, and compliance.
                       </p>
                     </div>
@@ -481,8 +804,8 @@ export default function ProjectsPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Product Vision</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Led design and release of a unified enterprise chat+voice widget (web + mobile) with single-session 
-                        continuity so users can switch channels without losing context (chat → voice → chat). Implemented via 
+                        Led design and release of a unified enterprise chat+voice widget (web + mobile) with single-session
+                        continuity so users can switch channels without losing context (chat → voice → chat). Implemented via
                         WebRTC with robust carrier fallback and SIP integration for legacy telephony.
                       </p>
                     </div>
@@ -512,7 +835,7 @@ export default function ProjectsPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Quality & Reliability</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Adaptive bitrate, jitter buffering, QoS signals with automatic codec fallback to preserve call quality 
+                        Adaptive bitrate, jitter buffering, QoS signals with automatic codec fallback to preserve call quality
                         on poor networks. Built telemetry dashboard for real-time call quality, latency, and session health.
                       </p>
                     </div>
@@ -520,7 +843,7 @@ export default function ProjectsPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Enterprise Controls</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Call recording opt-in, consent flows, PII masking at ingestion, SSO, SAML, and fine-grained RBAC for 
+                        Call recording opt-in, consent flows, PII masking at ingestion, SSO, SAML, and fine-grained RBAC for
                         widget features.
                       </p>
                     </div>
@@ -528,7 +851,7 @@ export default function ProjectsPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Impact</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Reduced time-to-integrate voice channels from weeks to days for enterprise clients, improved containment 
+                        Reduced time-to-integrate voice channels from weeks to days for enterprise clients, improved containment
                         and CSAT in omnichannel journeys, and increased usage of self-serve flows via rich actions.
                       </p>
                     </div>
