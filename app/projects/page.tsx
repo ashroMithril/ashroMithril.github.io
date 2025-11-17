@@ -327,7 +327,7 @@ export default function ProjectsPage() {
                 <CardHeader>
                   <CardTitle className="text-2xl">Email Automation for Support - Multithreaded, Multimodal Orchestration</CardTitle>
                   <CardDescription className="text-base">
-                    80%+ resolution rate within 1 week of launch, driving 30% of annual revenue
+                    80%+ resolution rate within 1 week of launch
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -382,7 +382,7 @@ export default function ProjectsPage() {
                     <div>
                       <h3 className="font-semibold mb-2">Results & Impact</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        <strong className="text-foreground">Achieved 80%+ resolution rate within 1 week of launch.</strong> Secured first million-dollar deals signed. Today, approximately <strong className="text-foreground">30% of company revenue</strong> comes from this channel. Feature set expanded to include multi-thread handling, multi-intent processing, OCR for attachments, and seamless agent handoffs.
+                        <strong className="text-foreground">Achieved 80%+ resolution rate within 1 week of launch.</strong> Secured first million-dollar deals signed.. Feature set expanded to include multi-thread handling, multi-intent processing, OCR for attachments, and seamless agent handoffs.
                       </p>
                     </div>
 
@@ -398,7 +398,6 @@ export default function ProjectsPage() {
                     <Badge>Email Automation</Badge>
                     <Badge>Multimodal AI</Badge>
                     <Badge>80%+ Resolution</Badge>
-                    <Badge>30% Revenue Driver</Badge>
                     <Badge>Thread Management</Badge>
                   </div>
                 </CardContent>

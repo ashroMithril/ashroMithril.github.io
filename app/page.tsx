@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { StatCard } from "@/components/stat-card"
 import { ArrowRight, Sparkles, Users, Brain, Target, TrendingUp, Globe, Layers, Lightbulb } from 'lucide-react'
 import { useEffect, useState } from "react"
+// import { FortuneCookie } from "@/components/fortune-cookie" // Removed import
 
 export default function HomePage() {
   const [scrollY, setScrollY] = useState(0)
@@ -145,94 +146,6 @@ export default function HomePage() {
               <StatCard value="70+" label="Integrations Launched" />
               <StatCard value="5%" label="Freemium Conversion" />
               <StatCard value="15+" label="Enterprise Clients" />
-            </div>
-          </div>
-        </section>
-
-        {/* Core Strengths */}
-        <section className="py-20 relative">
-          <div className="absolute top-10 right-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl" />
-
-          <div className="relative">
-            <div className="text-center mb-12 space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm bg-primary/5">
-                <Lightbulb className="h-4 w-4 text-primary" />
-                <span>What I Bring</span>
-              </div>
-              <h2 className="text-3xl font-bold">Core Strengths</h2>
-            </div>
-
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                <CardContent className="pt-6 space-y-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                    <Brain className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-semibold text-lg">Problem Solving</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Strategic thinking to solve complex product challenges end-to-end
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                <CardContent className="pt-6 space-y-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                    <Layers className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-semibold text-lg">Product Roadmap Planning</h3>
-                  <p className="text-sm text-muted-foreground">
-                    0-1 and 1-10 scaling expertise with data-driven strategy
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                <CardContent className="pt-6 space-y-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                    <Target className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-semibold text-lg">Data Analysis & Metrics</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Metrics-driven decision making with focus on user impact
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                <CardContent className="pt-6 space-y-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                    <Users className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-semibold text-lg">Cross-Functional Leadership</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Leading diverse teams to ship complex AI-powered products
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                <CardContent className="pt-6 space-y-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                    <Sparkles className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-semibold text-lg">User Experience Focus</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Crafting intuitive interfaces for technical and non-technical users
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:border-primary transition-all hover:shadow-lg">
-                <CardContent className="pt-6 space-y-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white group-hover:scale-110 transition-transform">
-                    <TrendingUp className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-semibold text-lg">Strategic Planning</h3>
-                  <p className="text-sm text-muted-foreground">Execution excellence from hypothesis to go-to-market</p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
