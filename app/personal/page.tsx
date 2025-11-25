@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
+import { FortuneCookie } from "@/components/fortune-cookie"
 
 export const metadata: Metadata = {
   title: "Personal - Apoorva Shrivastava",
@@ -82,6 +83,15 @@ export default function PersonalPage() {
             <p className="text-sm italic text-muted-foreground">
               "Every sunset brings the promise of a new dawn, and every sunrise is a gift of possibility."
             </p>
+          </div>
+
+          {/* Fortune Cookie Experience */}
+          <div className="mt-16 relative">
+            <div className="absolute top-0 left-0 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl" />
+            <div className="relative">
+              <FortuneCookie />
+            </div>
           </div>
         </div>
       </div>

@@ -1,18 +1,17 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname } from 'next/navigation'
 import { cn } from "@/lib/utils"
 import { Logo } from "@/components/logo"
 import { ScrollBanner } from "@/components/scroll-banner"
 
 const navItems = [
-  { href: "/about", label: "About" },
-  { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
   { href: "/personal", label: "Personal" },
   { href: "/contact", label: "Contact" },
 ]
+// </CHANGE>
 
 export function Navigation() {
   const pathname = usePathname()
