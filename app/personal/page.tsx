@@ -1,100 +1,80 @@
-import type { Metadata } from "next"
-import Image from "next/image"
+"use client"
+
 import { Navigation } from "@/components/navigation"
+import CellularBackground from "@/components/cellular-background"
+import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
+import { Camera, Heart, MapPin, Music, Coffee, Book } from 'lucide-react'
 import { FortuneCookie } from "@/components/fortune-cookie"
 
-export const metadata: Metadata = {
-  title: "Personal - Apoorva Shrivastava",
-  description: "A personal collection of moments chasing the sun on the horizon",
-}
-
-const sunsetImages = [
-  {
-    src: "/images/sunset-train.jpg",
-    alt: "Golden sunset view from a train with railroad tracks curving into the distance",
-    aspectRatio: "aspect-[3/4]",
-  },
-  {
-    src: "/images/sunset-bulbs.jpg",
-    alt: "Silhouetted light bulbs against vibrant orange sunset",
-    aspectRatio: "aspect-[3/4]",
-  },
-  {
-    src: "/images/sunset-beach.jpg",
-    alt: "Peaceful beach sunset with a silhouette by the water",
-    aspectRatio: "aspect-[3/4]",
-  },
-  {
-    src: "/images/sunset-neighborhood.jpg",
-    alt: "Suburban golden hour with palm trees and lush greenery",
-    aspectRatio: "aspect-[3/4]",
-  },
-  {
-    src: "/images/sunset-architecture.jpg",
-    alt: "Ornate architectural details framing a brilliant sunset",
-    aspectRatio: "aspect-[3/4]",
-  },
-  {
-    src: "/images/sunset-window.jpg",
-    alt: "City coastline at golden hour viewed through a window",
-    aspectRatio: "aspect-[3/4]",
-  },
+const PERSONAL_IMAGES = [
+  "IMG_0073.jpg", "IMG_0171.jpg", "IMG_0265.jpg", "IMG_0267.jpg",
+  "IMG_1750.jpg", "IMG_2032.jpg", "IMG_2563.jpg", "IMG_2843.jpg",
+  "IMG_2892.jpg", "IMG_2994.jpg", "IMG_3380.jpg", "IMG_4027.jpg",
+  "IMG_5867.jpg", "IMG_6544.jpg", "IMG_6572.jpg", "IMG_8760.jpg",
+  "IMG_9898.jpg", "IMG_9963.jpg"
 ]
 
 export default function PersonalPage() {
   return (
-    <>
-      <Navigation />
-      <div className="container py-12 pt-24">
-        <div className="mx-auto max-w-5xl">
-          {/* Header Section */}
-          <div className="mb-12 text-center">
-            <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">Chasing Horizons</h1>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed">
-              There's something magical about the sun on the horizon - whether it's the gentle promise of sunrise or the
-              warm embrace of sunset. Each moment captures the day's transition, a reminder to pause and appreciate the
-              beauty in between.
-            </p>
-          </div>
+    <CellularBackground>
+      <div className="min-h-screen">
+        <Navigation />
 
-          {/* Masonry Grid Gallery */}
-          <div className="columns-1 gap-4 space-y-4 md:columns-2 lg:columns-3">
-            {sunsetImages.map((image, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-lg break-inside-avoid transition-transform duration-300 hover:scale-[1.02]"
-              >
-                <div className="relative aspect-[3/4] w-full">
-                  <Image
-                    src={image.src || "/placeholder.svg"}
-                    alt={image.alt}
-                    fill
-                    className="object-cover transition-all duration-300 group-hover:brightness-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                </div>
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="space-y-12">
+
+            {/* Header */}
+            <div className="text-center space-y-6 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 rounded-full border border-orange-500/20 bg-orange-500/5 px-4 py-2 text-sm">
+                <Heart className="h-4 w-4 text-orange-500" />
+                <span className="font-medium">Life Beyond Work</span>
               </div>
-            ))}
-          </div>
 
-          {/* Bottom Quote */}
-          <div className="mt-12 text-center">
-            <p className="text-sm italic text-muted-foreground">
-              "Every sunset brings the promise of a new dawn, and every sunrise is a gift of possibility."
-            </p>
-          </div>
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                Capturing Moments & Memories
+              </h1>
 
-          {/* Fortune Cookie Experience */}
-          <div className="mt-16 relative">
-            <div className="absolute top-0 left-0 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl" />
-            <div className="relative">
+              <p className="text-xl text-muted-foreground leading-relaxed font-light italic">
+                "There's something magical about the sun on the horizon - whether it's the gentle promise of sunrise or the warm embrace of sunset. Each moment captures the day's transition, a reminder to pause and appreciate the beauty in between."
+              </p>
+            </div>
+
+            {/* Gallery Grid */}
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+              {PERSONAL_IMAGES.map((img, index) => (
+                <div key={index} className={`break-inside-avoid ${img.includes('0171') ? 'md:col-span-2 lg:col-span-2 w-full' : ''}`}>
+                  <Card className="border-0 overflow-hidden bg-transparent shadow-none group">
+                    <CardContent className="p-0 relative">
+                      <div className="relative w-full overflow-hidden rounded-2xl">
+                        <Image
+                          src={`/images/${img}`}
+                          alt={`Personal photo ${index + 1}`}
+                          width={img.includes('0171') ? 1200 : 800}
+                          height={img.includes('0171') ? 800 : 600}
+                          className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
+            </div>
+
+            {/* Footer Note */}
+            <div className="text-center pt-12 pb-8 space-y-12">
+              <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
+                <Camera className="h-4 w-4" />
+                <span>Shot on iPhone 15 Pro Max</span>
+              </p>
               <FortuneCookie />
             </div>
+
           </div>
         </div>
       </div>
-    </>
+    </CellularBackground>
   )
 }

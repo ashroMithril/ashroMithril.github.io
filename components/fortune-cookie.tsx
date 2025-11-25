@@ -1,207 +1,222 @@
 "use client"
 
 import { useState } from "react"
-import { Cookie, Sparkles } from 'lucide-react'
-import { Card } from "@/components/ui/card"
+import { Sparkles, RefreshCw } from 'lucide-react'
+import { cn } from "@/lib/utils"
 
 const motivationalQuotes = [
-  "The best way to predict the future is to invent it.",
-  "Innovation distinguishes between a leader and a follower.",
-  "Your work is going to fill a large part of your life, make it meaningful.",
-  "The only way to do great work is to love what you do.",
-  "Stay hungry, stay foolish.",
-  "Design is not just what it looks like, design is how it works.",
-  "Simplicity is the ultimate sophistication.",
-  "The future belongs to those who believe in the beauty of their dreams.",
-  "Don't wait for opportunity. Create it.",
-  "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-  "The only impossible journey is the one you never begin.",
-  "Believe you can and you're halfway there.",
-  "Act as if what you do makes a difference. It does.",
-  "The secret of getting ahead is getting started.",
-  "It always seems impossible until it's done.",
-  "Every expert was once a beginner. Keep learning.",
-  "Progress is not achieved by luck, it's made by determination.",
-  "Turn your wounds into wisdom and your obstacles into opportunities.",
-  "The difference between ordinary and extraordinary is that little extra.",
-  "Dream big, start small, act now.",
-  "Your limitation is only your imagination.",
-  "Great things never come from comfort zones.",
-  "The harder you work for something, the greater you'll feel when you achieve it.",
-  "Don't stop when you're tired. Stop when you're done.",
-  "Success doesn't come from what you do occasionally, it comes from what you do consistently.",
+  "Stay hungry. Stay foolish. — Steve Jobs",
+  "When something is important enough, you do it even if the odds are not in your favor. — Elon Musk",
+  "Our industry does not respect tradition. It only respects innovation. — Satya Nadella",
+  "Wear your failure as a badge of honor. — Sundar Pichai",
+  "Your most unhappy customers are your greatest source of learning. — Bill Gates",
+  "AI is the new electricity. — Andrew Ng",
+  "The future of AI should be human-centered. — Fei-Fei Li",
+  "Build systems that learn — that’s the future. — Yann LeCun",
+  "Solve intelligence and we can solve everything else. — Demis Hassabis",
+  "It’s exciting when machines learn to think. — Geoffrey Hinton",
+  "Don’t find customers for your products; find products for your customers. — Seth Godin",
+  "Skills are cheap. Passion is priceless. — Gary Vaynerchuk",
+  "Marketing takes a day to learn. Unfortunately it takes a lifetime to master. — Philip Kotler",
+  "Content is king — but context is God. — Neil Patel",
+  "People don’t buy what you do; they buy why you do it. — Simon Sinek",
+  "Success is not a good teacher; failure makes you humble. — Shah Rukh Khan",
+  "I don’t mind what you do for a living, as long as you do it with zeal. — Amitabh Bachchan",
+  "If you don’t do it with complete dedication, don’t do it at all. — Aamir Khan",
+  "You have to believe in yourself. — Deepika Padukone",
+  "Dream big, work hard, stay humble. — Priyanka Chopra"
 ]
 
 export function FortuneCookie() {
   const [isOpen, setIsOpen] = useState(false)
   const [currentQuote, setCurrentQuote] = useState("")
-  const [crackAnimation, setCrackAnimation] = useState(false)
+  const [isAnimating, setIsAnimating] = useState(false)
 
-  const handleClick = () => {
-    if (!isOpen) {
-      // Trigger crack animation
-      setCrackAnimation(true)
-      setTimeout(() => {
-        setIsOpen(true)
-        const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)]
-        setCurrentQuote(randomQuote)
-        setCrackAnimation(false)
-      }, 600)
-    } else {
-      // Reset cookie for next click
-      setIsOpen(false)
-      setTimeout(() => {
-        const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)]
-        setCurrentQuote(randomQuote)
-        setIsOpen(true)
-      }, 300)
-    }
+  const handleCrack = () => {
+    if (isOpen || isAnimating) return
+
+    setIsAnimating(true)
+
+    // Select random quote
+    const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)]
+    setCurrentQuote(randomQuote)
+
+    // Animation sequence
+    setTimeout(() => {
+      setIsOpen(true)
+      setIsAnimating(false)
+    }, 600) // Wait for shake to finish before splitting
+  }
+
+  const handleReset = () => {
+    setIsOpen(false)
+    setCurrentQuote("")
   }
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-[400px] py-12">
-      <div className="text-center mb-8 space-y-2">
+    <div className="relative flex flex-col items-center justify-center min-h-[600px] py-20 w-full">
+      {/* Full-page Sparkle Overlay */}
+      {isAnimating && (
+        <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <Sparkles
+              key={i}
+              className="absolute text-yellow-400 animate-sparkle-fall"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `-5%`,
+                width: `${Math.random() * 20 + 10}px`,
+                height: `${Math.random() * 20 + 10}px`,
+                animationDuration: `${Math.random() * 1 + 0.5}s`,
+                animationDelay: `${Math.random() * 0.5}s`
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      <div className="text-center mb-16 space-y-2 z-10">
         <h3 className="text-2xl font-bold">Need Some Wisdom?</h3>
-        <p className="text-muted-foreground">Click the fortune cookie for inspiration</p>
+        <p className="text-muted-foreground">Crack open a cookie for your daily inspiration</p>
       </div>
 
-      <div className="relative flex items-center justify-center gap-12 flex-wrap">
-        {/* Fortune Cookie */}
-        <button
-          onClick={handleClick}
-          className={`relative group focus:outline-none transition-transform duration-300 ${
-            crackAnimation ? "animate-shake" : ""
-          } ${isOpen ? "scale-90" : "hover:scale-110"}`}
-          disabled={crackAnimation}
+      <div className="relative flex items-center justify-center w-full max-w-lg h-64">
+
+        {/* The Fortune Paper */}
+        <div
+          className={cn(
+            "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white shadow-lg p-6 max-w-xs sm:max-w-sm w-full text-center border border-orange-100 transition-all duration-1000 ease-out z-0",
+            isOpen
+              ? "opacity-100 transform translate-y-4 rotate-0 scale-100"
+              : "opacity-0 transform translate-y-20 rotate-3 scale-50 pointer-events-none"
+          )}
+          style={{
+            boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(255, 237, 213, 0.5)"
+          }}
         >
-          <div
-            className={`relative w-40 h-40 transition-all duration-500`}
-          >
-            {/* Cookie body */}
-            <div
-              className={`absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full shadow-2xl transition-all duration-500 ${
-                crackAnimation ? "crack-animation" : ""
-              }`}
-            >
-              {/* Cookie texture */}
-              <div className="absolute inset-4 bg-gradient-to-br from-orange-300 to-orange-500 rounded-full" />
-              <div className="absolute inset-8 bg-gradient-to-br from-orange-200 to-orange-400 rounded-full" />
-
-              {/* Cookie icon */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Cookie className="w-16 h-16 text-white drop-shadow-lg" />
-              </div>
-
-              {/* Sparkles */}
-              <Sparkles className="absolute -top-2 -right-2 w-6 h-6 text-yellow-300 animate-pulse" />
-              <Sparkles className="absolute -bottom-2 -left-2 w-6 h-6 text-yellow-300 animate-pulse delay-150" />
+          <div className="border-2 border-orange-500/20 p-4 h-full flex flex-col items-center justify-center gap-4">
+            <Sparkles className="w-5 h-5 text-orange-400" />
+            <p className="font-serif text-lg text-orange-950 italic leading-relaxed">
+              &quot;{currentQuote}&quot;
+            </p>
+            <div className="w-full h-px bg-orange-200/50 my-2" />
+            <div className="flex gap-2 text-[10px] uppercase tracking-widest text-orange-400 font-semibold">
+              <span>Lucky Numbers</span>
+              <span>•</span>
+              <span>{Math.floor(Math.random() * 99)}</span>
+              <span>{Math.floor(Math.random() * 99)}</span>
+              <span>{Math.floor(Math.random() * 99)}</span>
             </div>
+          </div>
+        </div>
 
-            {/* Crack effect */}
-            {crackAnimation && (
-              <>
-                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-orange-900/40 animate-crack-horizontal" />
-                <div className="absolute top-0 left-1/2 w-0.5 h-full bg-orange-900/40 animate-crack-vertical" />
-              </>
+        {/* The Cookie Container */}
+        <div
+          className={cn(
+            "relative w-64 h-64 cursor-pointer transition-transform duration-500 z-20",
+            isAnimating && "animate-shake",
+            isOpen && "pointer-events-none"
+          )}
+          onClick={handleCrack}
+        >
+          {/* Left Half */}
+          <div
+            className={cn(
+              "absolute inset-0 transition-all duration-1000 ease-out origin-center",
+              isOpen ? "-translate-x-16 -rotate-12 opacity-0" : "translate-x-0 rotate-0 opacity-100"
             )}
+          >
+            <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-xl">
+              <path
+                d="M 100 100 C 60 100 40 140 40 160 C 40 180 80 180 100 160 L 100 100"
+                fill="#FDBA74" // orange-300
+                stroke="#EA580C" // orange-600
+                strokeWidth="2"
+              />
+              <path
+                d="M 100 100 C 60 100 20 60 20 100 C 20 140 60 140 100 100"
+                fill="#FED7AA" // orange-200
+                stroke="#EA580C" // orange-600
+                strokeWidth="2"
+              />
+              {/* Texture dots */}
+              <circle cx="60" cy="110" r="2" fill="#C2410C" opacity="0.3" />
+              <circle cx="50" cy="90" r="2" fill="#C2410C" opacity="0.3" />
+              <circle cx="80" cy="120" r="2" fill="#C2410C" opacity="0.3" />
+            </svg>
           </div>
 
-          {/* Hover glow effect */}
-          <div className="absolute inset-0 bg-orange-400/20 rounded-full blur-2xl group-hover:bg-orange-400/40 transition-all duration-300" />
-        </button>
+          {/* Right Half */}
+          <div
+            className={cn(
+              "absolute inset-0 transition-all duration-1000 ease-out origin-center",
+              isOpen ? "translate-x-16 rotate-12 opacity-0" : "translate-x-0 rotate-0 opacity-100"
+            )}
+          >
+            <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-xl">
+              <path
+                d="M 100 100 C 140 100 160 140 160 160 C 160 180 120 180 100 160 L 100 100"
+                fill="#FDBA74" // orange-300
+                stroke="#EA580C" // orange-600
+                strokeWidth="2"
+              />
+              <path
+                d="M 100 100 C 140 100 180 60 180 100 C 180 140 140 140 100 100"
+                fill="#FED7AA" // orange-200
+                stroke="#EA580C" // orange-600
+                strokeWidth="2"
+              />
+              {/* Texture dots */}
+              <circle cx="140" cy="110" r="2" fill="#C2410C" opacity="0.3" />
+              <circle cx="150" cy="90" r="2" fill="#C2410C" opacity="0.3" />
+              <circle cx="120" cy="120" r="2" fill="#C2410C" opacity="0.3" />
+            </svg>
+          </div>
 
-        {/* Fortune quote card - Now appears to the right/left of cookie */}
-        {isOpen && currentQuote && (
-          <Card className="w-96 max-w-[90vw] p-6 animate-slide-in shadow-2xl border-2 border-orange-200">
-            <div className="space-y-4">
-              <div className="flex items-center gap-2 text-orange-600">
-                <Sparkles className="w-5 h-5" />
-                <span className="font-semibold">Your Fortune</span>
-              </div>
-              <p className="text-lg leading-relaxed italic text-foreground">&quot;{currentQuote}&quot;</p>
-              <div className="pt-4 border-t">
-                <button
-                  onClick={handleClick}
-                  className="text-sm text-orange-600 hover:text-orange-700 font-medium hover:underline"
-                >
-                  Get another fortune →
-                </button>
-              </div>
+          {/* Center overlap/fold visual to make it look unified when closed */}
+          <div
+            className={cn(
+              "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#FDBA74] rounded-full blur-md transition-opacity duration-300",
+              isOpen ? "opacity-0" : "opacity-100"
+            )}
+          />
+
+          {/* Click hint */}
+          {!isOpen && !isAnimating && (
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-sm font-medium text-orange-600 animate-bounce whitespace-nowrap">
+              Click to crack open!
             </div>
-          </Card>
+          )}
+        </div>
+
+        {/* Reset Button */}
+        {isOpen && (
+          <button
+            onClick={handleReset}
+            className="absolute -bottom-24 left-1/2 -translate-x-1/2 flex items-center gap-2 px-6 py-2 bg-orange-600 text-white rounded-full hover:bg-orange-700 transition-colors shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700 z-30"
+          >
+            <RefreshCw className="w-4 h-4" />
+            <span>Open Another</span>
+          </button>
         )}
+
       </div>
 
-      {/* Custom animations */}
       <style jsx>{`
         @keyframes shake {
-          0%,
-          100% {
-            transform: translateX(0) rotate(0deg);
-          }
-          25% {
-            transform: translateX(-10px) rotate(-5deg);
-          }
-          75% {
-            transform: translateX(10px) rotate(5deg);
-          }
+          0%, 100% { transform: rotate(0deg); }
+          25% { transform: rotate(-5deg); }
+          75% { transform: rotate(5deg); }
         }
-
-        @keyframes crack-horizontal {
-          from {
-            opacity: 0;
-            transform: scaleX(0);
-          }
-          to {
-            opacity: 1;
-            transform: scaleX(1);
-          }
+        @keyframes sparkle-fall {
+          0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+          100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
         }
-
-        @keyframes crack-vertical {
-          from {
-            opacity: 0;
-            transform: scaleY(0);
-          }
-          to {
-            opacity: 1;
-            transform: scaleY(1);
-          }
-        }
-
-        @keyframes slide-in {
-          from {
-            opacity: 0;
-            transform: translateX(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
         .animate-shake {
-          animation: shake 0.6s ease-in-out;
+          animation: shake 0.5s ease-in-out infinite;
         }
-
-        .animate-crack-horizontal {
-          animation: crack-horizontal 0.3s ease-out;
-        }
-
-        .animate-crack-vertical {
-          animation: crack-vertical 0.3s ease-out 0.15s;
-        }
-
-        .animate-slide-in {
-          animation: slide-in 0.5s ease-out;
-        }
-
-        .crack-animation {
-          animation: shake 0.3s ease-in-out;
-        }
-
-        .delay-150 {
-          animation-delay: 150ms;
+        .animate-sparkle-fall {
+          animation: sparkle-fall linear forwards;
         }
       `}</style>
     </div>

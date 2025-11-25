@@ -6,7 +6,25 @@ import Image from "next/image"
 import { InfiniteGallery } from "@/components/infinite-gallery"
 
 export default function ContactPage() {
-  const sunsetImages = [
+  const galleryImages = [
+    "/images/IMG_0073.jpg",
+    "/images/IMG_0171.jpg",
+    "/images/IMG_0265.jpg",
+    "/images/IMG_0267.jpg",
+    "/images/IMG_1750.jpg",
+    "/images/IMG_2032.jpg",
+    "/images/IMG_2563.jpg",
+    "/images/IMG_2843.jpg",
+    "/images/IMG_2892.jpg",
+    "/images/IMG_2994.jpg",
+    "/images/IMG_3380.jpg",
+    "/images/IMG_4027.jpg",
+    "/images/IMG_5867.jpg",
+    "/images/IMG_6544.jpg",
+    "/images/IMG_6572.jpg",
+    "/images/IMG_8760.jpg",
+    "/images/IMG_9898.jpg",
+    "/images/IMG_9963.jpg",
     "/images/sunset-train.jpg",
     "/images/sunset-bulbs.jpg",
     "/images/sunset-beach.jpg",
@@ -19,7 +37,7 @@ export default function ContactPage() {
     <div className="min-h-screen">
       <Navigation />
 
-      <div className="container py-20">
+      <div className="container py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto space-y-12">
           <div className="text-center space-y-6">
             <div className="flex justify-center">
@@ -41,8 +59,8 @@ export default function ContactPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <Card>
-              <CardHeader>
+            <Card className="text-center">
+              <CardHeader className="flex flex-col items-center">
                 <Mail className="h-8 w-8 mb-2 text-primary" />
                 <CardTitle>Email</CardTitle>
                 <CardDescription>Send me a message</CardDescription>
@@ -54,8 +72,8 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
+            <Card className="text-center">
+              <CardHeader className="flex flex-col items-center">
                 <Phone className="h-8 w-8 mb-2 text-primary" />
                 <CardTitle>Phone</CardTitle>
                 <CardDescription>Call or WhatsApp</CardDescription>
@@ -66,8 +84,8 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
+            <Card className="text-center">
+              <CardHeader className="flex flex-col items-center">
                 <Linkedin className="h-8 w-8 mb-2 text-primary" />
                 <CardTitle>LinkedIn</CardTitle>
                 <CardDescription>Connect professionally</CardDescription>
@@ -84,8 +102,8 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
+            <Card className="text-center">
+              <CardHeader className="flex flex-col items-center">
                 <Download className="h-8 w-8 mb-2 text-primary" />
                 <CardTitle>Resume</CardTitle>
                 <CardDescription>Download full CV</CardDescription>
@@ -99,8 +117,8 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
+            <Card className="text-center">
+              <CardHeader className="flex flex-col items-center">
                 <Calendar className="h-8 w-8 mb-2 text-primary" />
                 <CardTitle>Schedule a Call</CardTitle>
                 <CardDescription>Book a 30-minute meeting</CardDescription>
@@ -117,8 +135,8 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
+            <Card className="text-center">
+              <CardHeader className="flex flex-col items-center">
                 <Linkedin className="h-8 w-8 mb-2 text-primary" />
                 <CardTitle>LinkedIn</CardTitle>
                 <CardDescription>Connect & get in touch</CardDescription>
@@ -137,12 +155,12 @@ export default function ContactPage() {
             </Card>
           </div>
 
-          <Card className="bg-muted/50">
+          <Card className="bg-muted/50 text-center">
             <CardHeader>
               <CardTitle>What I Can Help With</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-sm text-muted-foreground">
+              <ul className="space-y-3 text-sm text-muted-foreground inline-block text-left max-w-md mx-auto">
                 <li className="flex gap-3">
                   <span className="text-primary">•</span>
                   <span>AI agent strategy and implementation for enterprise products</span>
@@ -174,7 +192,7 @@ export default function ContactPage() {
       </div>
 
       <div className="mt-20">
-        <InfiniteGallery images={sunsetImages} />
+        <InfiniteGallery images={galleryImages} />
       </div>
     </div>
   )
