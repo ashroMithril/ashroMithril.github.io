@@ -561,6 +561,180 @@ body {
     margin-bottom: 0.25rem;
 }
 
+/* Beyond Work Section */
+.beyond-work-section {
+    padding: 4rem 0;
+    margin: 4rem 0;
+}
+
+.beyond-work-card {
+    max-width: 80rem;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(249, 115, 22, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(249, 115, 22, 0.3);
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(249, 115, 22, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.beyond-work-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, transparent, var(--orange-500), transparent);
+}
+
+.beyond-work-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.beyond-work-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(135deg, var(--orange-500), var(--orange-600));
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(249, 115, 22, 0.3);
+}
+
+.beyond-work-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
+.beyond-work-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--orange-500), var(--orange-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+.beyond-work-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.beyond-work-intro {
+    font-size: 1.25rem;
+    color: var(--gray-700);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.beyond-work-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.highlight-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 1rem;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    transition: all 0.3s;
+}
+
+.highlight-item:hover {
+    transform: translateX(8px);
+    border-color: var(--orange-500);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.highlight-item h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--orange-500);
+    margin-bottom: 0.25rem;
+}
+
+.highlight-item p {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.beyond-work-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.gallery-preview {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.gallery-preview::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-preview:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-preview:hover::after {
+    opacity: 1;
+}
+
+.gallery-preview img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.beyond-work-footer {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(249, 115, 22, 0.2);
+}
+
+.gallery-note {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    font-style: italic;
+}
+
 /* CTA Section */
 .cta-section {
     position: relative;
@@ -661,6 +835,31 @@ body {
 
     .section {
         padding: 3rem 0;
+    }
+
+    .beyond-work-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .beyond-work-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .beyond-work-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .beyond-work-intro {
+        font-size: 1.125rem;
+    }
+
+    .highlight-item {
+        padding: 1rem;
+    }
+
+    .gallery-preview img {
+        height: 150px;
     }
 }
 
