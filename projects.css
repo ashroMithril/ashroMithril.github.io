@@ -1,0 +1,226 @@
+/* Projects Page Specific Styles */
+.projects-page {
+    padding-top: 5rem;
+}
+
+.projects-container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.page-header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.25rem;
+    color: var(--gray-700);
+    font-weight: 300;
+}
+
+.experience-section,
+.projects-section {
+    margin-bottom: 4rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(249, 115, 22, 0.2);
+    margin-bottom: 2rem;
+}
+
+.section-header .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--orange-500);
+}
+
+.section-header h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+/* Job Header */
+.job-header {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.job-header h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+}
+
+.icon-sm {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.date-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+}
+
+.chevron {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+.accordion-item.open .chevron {
+    transform: rotate(180deg);
+}
+
+/* Achievements Grid */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+.achievements-grid h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--orange-600);
+    margin-bottom: 0.75rem;
+}
+
+.achievements-grid ul {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements-grid li {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.achievements-grid li::before {
+    content: '•';
+    color: var(--orange-500);
+    font-weight: 700;
+}
+
+/* Project Header */
+.project-header h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.project-subtitle {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+}
+
+/* Project Details */
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-section h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--orange-600);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.detail-section h4::before {
+    content: '';
+    width: 0.375rem;
+    height: 0.375rem;
+    background: var(--orange-500);
+    border-radius: 50%;
+}
+
+.detail-section p {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.75;
+}
+
+.detail-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-section li {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.detail-section li::before {
+    content: '→';
+    color: var(--orange-500);
+    font-weight: 700;
+}
+
+.detail-section strong {
+    color: var(--gray-900);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .job-header {
+        flex-direction: column;
+    }
+    
+    .date-badge {
+        align-self: flex-start;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
