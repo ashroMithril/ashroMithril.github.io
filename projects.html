@@ -182,6 +182,54 @@
                 </div>
 
                 <div class="accordion">
+                    <!-- Prompt-First Agent Builder -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="project-header">
+                                <h3>Prompt-First Agent Builder</h3>
+                                <p class="project-subtitle">Transforming flow-based automation into conversational AI agents</p>
+                            </div>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>The Problem</h4>
+                                    <p>Traditional flow-based builders created fragmentation and required technical expertise. Customers struggled to maintain complex conversation flows, and non-technical users couldn't easily adapt agents to changing needs.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>My Role</h4>
+                                    <p>Led the product vision and roadmap to convert Yellow.ai's core platform into a prompt-first agent builder. Defined user journeys, acceptance criteria, and worked closely with engineering and design to ship the new experience.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Approach</h4>
+                                    <ul>
+                                        <li>Conducted user research with 20+ customers to understand pain points</li>
+                                        <li>Designed prompt templates with safety guardrails and orchestration layer</li>
+                                        <li>Built multimodal capabilities for text, voice, and future channels</li>
+                                        <li>Created comprehensive testing framework and rollout plan</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Outcome</h4>
+                                    <p>Successfully launched the new agent builder as the core SaaS capability. <strong>Reduced time-to-value for customers</strong> and improved agent maintainability. The platform now supports prompt-first interactions across multiple channels.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="badge-group">
+                                <span class="badge">GenAI</span>
+                                <span class="badge">Product Strategy</span>
+                                <span class="badge">UX Design</span>
+                                <span class="badge">Prompt Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Orchestrator LLM -->
                     <div class="accordion-item">
                         <button class="accordion-trigger">
@@ -202,12 +250,28 @@
                                 
                                 <div class="detail-section">
                                     <h4>Problem & Opportunity</h4>
-                                    <p>Around 40%+ undeflected tickets were going to fallback due to poor intent identification, inability to handle context switching, and irrelevant small talk responses.</p>
+                                    <p>Around 40%+ undeflected tickets were going to fallback due to poor intent identification, inability to handle context switching, and irrelevant small talk responses. Analysis of multiple bot conversations revealed massive UX gaps.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Actions Taken</h4>
+                                    <ul>
+                                        <li>Interviewed analysts and implementation engineers, documenting UX failures</li>
+                                        <li>Prioritized intent identification and relevant small talk as most critical</li>
+                                        <li>Designed Dynamic Chat Node as another node in existing builder for quick deployment</li>
+                                        <li>Built Orchestrator LLM layer to intelligently route between intents and handle context</li>
+                                        <li>Shipped initial version in weeks by leveraging existing node architecture</li>
+                                    </ul>
                                 </div>
                                 
                                 <div class="detail-section">
                                     <h4>Results & Impact</h4>
-                                    <p><strong>Increased deflection rate to 80%+ from existing 60%.</strong> Today, <strong>100% of platform bots run on Orchestrator LLM</strong> - both old bots migrated from NLP and all new bots built on this foundation.</p>
+                                    <p><strong>Increased deflection rate to 80%+ from existing 60%.</strong> Saw immediate increase in customer CSAT scores and brand NPS. Today, <strong>100% of platform bots run on Orchestrator LLM</strong> - both old bots migrated from NLP and all new bots built on this foundation.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Learnings</h4>
+                                    <p>The combination of Dynamic Chat Node for personalized messaging and Orchestrator LLM for intelligent routing created a step-function improvement in conversation quality. Rapid deployment by fitting into existing node architecture accelerated adoption.</p>
                                 </div>
                             </div>
                             
@@ -216,6 +280,57 @@
                                 <span class="badge">80%+ Deflection</span>
                                 <span class="badge">NLP → LLM Migration</span>
                                 <span class="badge">Platform-wide</span>
+                                <span class="badge">CSAT Improvement</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Multithreaded, Multimodal Omnichannel Platform -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="project-header">
+                                <h3>Multithreaded, Multimodal Omnichannel Platform</h3>
+                                <p class="project-subtitle">True omnichannel architecture with unified conversation continuity across all channels</p>
+                            </div>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>Core Architecture</h4>
+                                    <p>Architected the core omnichannel model: unified conversation ID, per-channel events store, and thread-level state so users can seamlessly continue any thread across email, chat, voice, and attachments without losing context.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Multimodal NLU Stack</h4>
+                                    <p>Merged embeddings from text, OCR, and voice transcripts into a single semantic layer enabling cross-modal retrieval, intent detection, and similarity search for rapid KB responses.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Key Capabilities</h4>
+                                    <ul>
+                                        <li>Channel continuity and session transfer: single-session continuity for chat-to-voice and email-to-chat handoffs</li>
+                                        <li>Session transfer APIs, conversation reconciliation, and conflict resolution</li>
+                                        <li>Thread-level telemetry, SLA heatmaps, inbox views for multithread queues</li>
+                                        <li>Automated alerts for threads nearing SLA breaches or needing human review</li>
+                                        <li>Enterprise controls: feature flags per-channel, policy-driven routing, RBAC, tenant-level configuration</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Business Impact</h4>
+                                    <p>Enabled truly omnichannel support journeys that reduce customer friction, reduce redundant follow-ups, and let automation operate safely at thread granularity. Customers can run concurrent threads across multiple channels while preserving context, SLAs, and compliance.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="badge-group">
+                                <span class="badge">Omnichannel</span>
+                                <span class="badge">Thread Management</span>
+                                <span class="badge">Multimodal NLU</span>
+                                <span class="badge">Session Transfer</span>
+                                <span class="badge">Enterprise Architecture</span>
                             </div>
                         </div>
                     </div>
@@ -224,7 +339,7 @@
                     <div class="accordion-item">
                         <button class="accordion-trigger">
                             <div class="project-header">
-                                <h3>Email Automation for Support</h3>
+                                <h3>Email Automation for Support - Multithreaded, Multimodal Orchestration</h3>
                                 <p class="project-subtitle">80%+ resolution rate within 1 week of launch</p>
                             </div>
                             <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -234,18 +349,39 @@
                         <div class="accordion-content">
                             <div class="project-details">
                                 <div class="detail-section">
-                                    <h4>Problem & Opportunity</h4>
-                                    <p>Over 50% of support conversations were happening in email. Companies with 100 agents and 50k monthly tickets ended up with 500 emails per agent, leading to delayed responses and poor customer experience.</p>
+                                    <h4>Context & Role</h4>
+                                    <p>Automate support conversations over email - one of the most used channels by enterprise support systems. Over 50% of support conversations were either happening in email directly or converted into email tickets. Led as PM with one senior dev for MVP, then 2 SDEs, designer, and shared QA for full product.</p>
                                 </div>
                                 
                                 <div class="detail-section">
-                                    <h4>Solution</h4>
-                                    <p>Built MVP in one month: KB-based automation tackling huge multi-intent emails, noise clearing, segmenting, multi-thread responses, API-based responses, sentiment analysis, and OCR for attachments.</p>
+                                    <h4>Problem & Opportunity</h4>
+                                    <p>Huge bulky emails with massive volumes - companies with 100 agents and 50k monthly tickets ended up with 500 emails per agent. This led to delayed responses, inconsistent handling, and poor customer experience. Before LLMs, extracting entities from emails was nearly impossible.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Constraints & Hypothesis</h4>
+                                    <p>Half a quarter to experiment and prove results or discontinue. User interviews revealed additional needs: analytics on emails, no full automation initially - just analytics and draft email responses for agents. Hypothesis: KB-based automation could achieve 80%+ resolution rate.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Actions Taken</h4>
+                                    <ul>
+                                        <li>Built MVP in one month: KB-based automation tackling huge multi-intent emails, noise clearing, segmenting</li>
+                                        <li>Added multi-thread responses, API-based responses, sentiment analysis, draft creation</li>
+                                        <li>Implemented reading attachments with OCR, transfer to agents functionality</li>
+                                        <li>Designed minimalistic setup UI to fit into existing flow builder for enterprise builders</li>
+                                        <li>Launched marketing campaigns specifically for email automation</li>
+                                    </ul>
                                 </div>
                                 
                                 <div class="detail-section">
                                     <h4>Results & Impact</h4>
-                                    <p><strong>Achieved 80%+ resolution rate within 1 week of launch.</strong> Secured first million-dollar deals. Feature set expanded to include multi-thread handling, multi-intent processing, and seamless agent handoffs.</p>
+                                    <p><strong>Achieved 80%+ resolution rate within 1 week of launch.</strong> Secured first million-dollar deals. Feature set expanded to include multi-thread handling, multi-intent processing, OCR for attachments, and seamless agent handoffs.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Learnings</h4>
+                                    <p>User research uncovered that customers initially wanted analytics and drafting rather than full automation. Starting with KB-based automation proved the concept quickly, then iteratively added multimodal capabilities.</p>
                                 </div>
                             </div>
                             
@@ -258,11 +394,56 @@
                         </div>
                     </div>
 
+                    <!-- Customizable Agent Assist Platform -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="project-header">
+                                <h3>Customizable Agent Assist Platform</h3>
+                                <p class="project-subtitle">Real-time AI assistance for support agents across Yellow.ai and third-party CRMs</p>
+                            </div>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>Overview</h4>
+                                    <p>Productized a fully customizable agent-assist layer that plugs into Yellow.ai and third-party CRMs (Salesforce, Zendesk, ServiceNow) via lightweight connector SDKs and webhook APIs.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>Multilayer suggestion engine with configurable confidence thresholds for auto-apply vs. soft suggestions</li>
+                                        <li>Inline UI overlay and agent sidebar supporting rich cards, attachments, and one-click CRM actions</li>
+                                        <li>Human-in-the-loop controls: whisper mode, suggested-reply approval, editable responses, and audit logs</li>
+                                        <li>Security features: RBAC, PII redaction, session encryption, and configurable data residency</li>
+                                        <li>Partner SDK ecosystem with sample apps and certification program reducing integration time by 60%</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Impact</h4>
+                                    <p>Pilot deployments reported <strong>25-40% reduction in average handle time</strong> and <strong>10-20 point improvement in agent satisfaction</strong>, enabling enterprise customers to realize significant cost savings through higher automation confidence.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="badge-group">
+                                <span class="badge">AI Assistance</span>
+                                <span class="badge">CRM Integration</span>
+                                <span class="badge">Real-time</span>
+                                <span class="badge">Compliance</span>
+                                <span class="badge">Partner SDKs</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Integrations & Marketplace -->
                     <div class="accordion-item">
                         <button class="accordion-trigger">
                             <div class="project-header">
-                                <h3>Integrations & Marketplace Scale</h3>
+                                <h3>Integrations & Marketplace Scale (70+ integrations)</h3>
                                 <p class="project-subtitle">Launching 70+ integrations to connect AI agents with revenue systems</p>
                             </div>
                             <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -331,7 +512,7 @@
                                 
                                 <div class="detail-section">
                                     <h4>Results</h4>
-                                    <p>Achieved 5% conversion rate from inbound traffic to paying customers, seeding ongoing PLG motion for the platform and reducing customer acquisition costs.</p>
+                                    <p>Achieved <strong>5% conversion rate</strong> from inbound traffic to paying customers, seeding ongoing PLG motion for the platform and reducing customer acquisition costs.</p>
                                 </div>
                             </div>
                             
@@ -340,6 +521,173 @@
                                 <span class="badge badge-outline">Freemium</span>
                                 <span class="badge badge-outline">Growth</span>
                                 <span class="badge badge-outline">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payments & Pricing Strategy -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="project-header">
+                                <h3>Payments & Pricing Strategy</h3>
+                                <p class="project-subtitle">End-to-end payments automation and revenue optimization</p>
+                            </div>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>Scope</h4>
+                                    <p>Led comprehensive work on pricing and packaging strategy, payments infrastructure, and billing automation. Connected product usage to revenue through telemetry and analytics.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Key Deliverables</h4>
+                                    <ul>
+                                        <li>Pricing model based on usage patterns and customer segments</li>
+                                        <li>Automated billing and payments infrastructure</li>
+                                        <li>Revenue telemetry and reporting dashboards</li>
+                                        <li>Self-serve upgrade and payment flows</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="badge-group">
+                                <span class="badge badge-outline">Pricing</span>
+                                <span class="badge badge-outline">Payments</span>
+                                <span class="badge badge-outline">Revenue</span>
+                                <span class="badge badge-outline">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payments Automation -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="project-header">
+                                <h3>Payments Automation - Strategic Revenue Infrastructure</h3>
+                                <p class="project-subtitle">500 demo requests and 50+ direct upgrade requests monthly drove automated payment system</p>
+                            </div>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>Context & Role</h4>
+                                    <p>Led strategic decision and full execution to add automated payment collection mechanism across the platform. Worked with finance team, partner billing POCs, and paying customers to understand current process and design optimal flows.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Problem & Opportunity</h4>
+                                    <p>With 500 demo requests and around 50 direct requests to upgrade and pay per month, manual payment processes were creating bottlenecks. Main challenges: tracking paid vs unpaid bots, linking paid subscriptions for smaller payments, managing partner billing, and getting pricing/packaging right for every region.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Actions Taken</h4>
+                                    <ul>
+                                        <li>Conducted user research with finance team, partner billing POCs, and paying customers</li>
+                                        <li>Built POC using direct link sharing to validate approach before full integration</li>
+                                        <li>Solved pricing and packaging complexity across different regions and customer segments</li>
+                                        <li>Integrated platform → subscription → bots to Salesforce to backend to NetSuite, Stripe, etc.</li>
+                                        <li>Maintained manual PO billing path for enterprise customers requiring it</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Results & Impact</h4>
+                                    <p>Successfully automated payment collection for high-volume smaller transactions while maintaining enterprise PO workflows. Enabled tracking of paid/unpaid bots with subscription linkage. Reduced payment friction for SME and partner segments.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Learnings</h4>
+                                    <p>Regional pricing/packaging complexity was the biggest challenge. POC validation before full integration prevented costly mistakes. Maintaining dual paths (automated + manual PO) served different customer segments effectively.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="badge-group">
+                                <span class="badge">Payments Automation</span>
+                                <span class="badge">500+ Monthly Demos</span>
+                                <span class="badge">Multi-region Pricing</span>
+                                <span class="badge">Subscription Management</span>
+                                <span class="badge">Revenue Infrastructure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Self-Serve Platform & PLG -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="project-header">
+                                <h3>Self-Serve Platform & PLG</h3>
+                                <p class="project-subtitle">Driving 5% of total company revenue</p>
+                            </div>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>Problem</h4>
+                                    <p>Reliance on a purely sales-led motion limited growth in the SMB segment. Smaller prospects faced high friction and long sales cycles, resulting in missed revenue opportunities.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Solution</h4>
+                                    <p>Launched a comprehensive Self-Serve platform enabling users to sign up, onboard, and purchase subscriptions without sales intervention. Implemented PLG mechanics like freemium tiers and in-product upsells.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Impact</h4>
+                                    <p>Successfully opened a new revenue stream, <strong>contributing 5% to the company's total revenue</strong>. Reduced customer acquisition cost (CAC) and accelerated adoption in the mid-market segment.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="badge-group">
+                                <span class="badge badge-outline">PLG</span>
+                                <span class="badge badge-outline">Growth Strategy</span>
+                                <span class="badge badge-outline">Monetization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partner Onboarding & Billing -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="project-header">
+                                <h3>Partner Onboarding & Billing Automation</h3>
+                                <p class="project-subtitle">Streamlining operations for scale</p>
+                            </div>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="project-details">
+                                <div class="detail-section">
+                                    <h4>Problem</h4>
+                                    <p>Manual partner onboarding and complex PO-based billing reconciliation were prone to errors and consumed significant operational resources, creating a bottleneck for partnership expansion.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Solution</h4>
+                                    <p>Automated the end-to-end partner onboarding workflow and built a robust PO billing automation system. This ensured accurate invoicing and seamless provisioning of partner accounts.</p>
+                                </div>
+                                
+                                <div class="detail-section">
+                                    <h4>Impact</h4>
+                                    <p>Drastically reduced onboarding time and billing discrepancies. Enabled the operations team to support a growing partner network without proportional headcount increase.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="badge-group">
+                                <span class="badge badge-outline">Automation</span>
+                                <span class="badge badge-outline">FinTech</span>
+                                <span class="badge badge-outline">Operations</span>
                             </div>
                         </div>
                     </div>
