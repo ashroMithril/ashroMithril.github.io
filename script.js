@@ -1,10 +1,10 @@
-// Cellular Background Animation
+// Cellular Background Animation - Sky Blue Theme
 class CellularBackground {
     constructor(canvas) {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');
         this.cells = [];
-        this.numCells = 50;
+        this.numCells = 80; // More cells but smaller
         this.resize();
         this.init();
         this.animate();
@@ -19,14 +19,27 @@ class CellularBackground {
 
     init() {
         this.cells = [];
+        // Sky blue color palette
+        const blueShades = [
+            [135, 206, 235], // Sky blue
+            [176, 224, 230], // Powder blue
+            [173, 216, 230], // Light blue
+            [135, 206, 250], // Light sky blue
+            [100, 149, 237], // Cornflower blue
+            [70, 130, 180],  // Steel blue
+            [65, 105, 225],  // Royal blue
+            [30, 144, 255],  // Dodger blue
+        ];
+        
         for (let i = 0; i < this.numCells; i++) {
+            const shade = blueShades[Math.floor(Math.random() * blueShades.length)];
             this.cells.push({
                 x: Math.random() * this.canvas.width,
                 y: Math.random() * this.canvas.height,
-                radius: Math.random() * 100 + 50,
-                vx: (Math.random() - 0.5) * 0.5,
-                vy: (Math.random() - 0.5) * 0.5,
-                color: `rgba(249, 115, 22, ${Math.random() * 0.1 + 0.02})`
+                radius: Math.random() * 15 + 5, // Much smaller: 5-20px instead of 50-150px
+                vx: (Math.random() - 0.5) * 0.3,
+                vy: (Math.random() - 0.5) * 0.3,
+                color: `rgba(${shade[0]}, ${shade[1]}, ${shade[2]}, ${Math.random() * 0.3 + 0.1})`
             });
         }
     }
@@ -51,19 +64,19 @@ class CellularBackground {
             this.ctx.fill();
         });
 
-        // Draw connections
+        // Draw connections with sky blue
         this.cells.forEach((cell, i) => {
             this.cells.slice(i + 1).forEach(otherCell => {
                 const dx = cell.x - otherCell.x;
                 const dy = cell.y - otherCell.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < 200) {
+                if (distance < 120) {
                     this.ctx.beginPath();
                     this.ctx.moveTo(cell.x, cell.y);
                     this.ctx.lineTo(otherCell.x, otherCell.y);
-                    this.ctx.strokeStyle = `rgba(249, 115, 22, ${0.05 * (1 - distance / 200)})`;
-                    this.ctx.lineWidth = 1;
+                    this.ctx.strokeStyle = `rgba(135, 206, 235, ${0.15 * (1 - distance / 120)})`;
+                    this.ctx.lineWidth = 0.5;
                     this.ctx.stroke();
                 }
             });

@@ -6,23 +6,40 @@
 }
 
 :root {
-    --orange-500: #f97316;
-    --orange-600: #ea580c;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-700: #374151;
-    --gray-900: #111827;
+    /* Sky Blue / Paper Blue Theme */
+    --accent: #1e88e5;
+    --accent-light: #64b5f6;
+    --accent-dark: #1565c0;
+    --bg: #f0f7ff;
+    --bg-secondary: #e3f2fd;
+    --text: #1a237e;
+    --text-secondary: #5c6bc0;
+    --border: #bbdefb;
+    --highlight: #0d47a1;
+    --sky-light: #e1f5fe;
+    --sky-medium: #81d4fa;
+    --paper-blue: #e8eaf6;
+    
+    /* Legacy mappings for compatibility */
+    --orange-500: #1e88e5;
+    --orange-600: #1565c0;
+    --gray-50: #f0f7ff;
+    --gray-100: #e3f2fd;
+    --gray-200: #bbdefb;
+    --gray-300: #90caf9;
+    --gray-700: #5c6bc0;
+    --gray-900: #1a237e;
     --white: #ffffff;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     line-height: 1.6;
-    color: var(--gray-900);
-    background: var(--white);
+    color: var(--text);
+    background: linear-gradient(135deg, var(--bg) 0%, var(--sky-light) 50%, var(--paper-blue) 100%);
+    background-attachment: fixed;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 /* Cellular Background */
