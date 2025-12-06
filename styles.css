@@ -1064,3 +1064,571 @@ body {
     }
 }
 
+/* ================================================
+   DEVICE WIREFRAME STYLES
+   ================================================ */
+
+/* MacBook Pro Frame - Hero */
+.macbook-frame {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.macbook-frame.hero-device {
+    transform: perspective(1500px) rotateX(5deg);
+    transition: transform 0.5s ease;
+}
+
+.macbook-frame.hero-device:hover {
+    transform: perspective(1500px) rotateX(0deg);
+}
+
+.macbook-screen {
+    background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 20px 20px 0 0;
+    padding: 12px 12px 0 12px;
+    position: relative;
+}
+
+.macbook-notch {
+    width: 120px;
+    height: 24px;
+    background: #1a1a1a;
+    border-radius: 0 0 12px 12px;
+    margin: 0 auto 8px;
+    position: relative;
+}
+
+.macbook-notch::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #3a3a3a;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.macbook-content {
+    background: #000;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+}
+
+.macbook-content video,
+.macbook-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.macbook-base {
+    background: linear-gradient(180deg, #c4c4c4 0%, #a0a0a0 50%, #d4d4d4 100%);
+    height: 16px;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+}
+
+.macbook-keyboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #888, transparent);
+    border-radius: 2px;
+}
+
+/* Browser Window Frame */
+.browser-frame {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(30, 136, 229, 0.15);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.browser-header {
+    background: linear-gradient(180deg, #f8f8f8 0%, #e8e8e8 100%);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.browser-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.browser-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.browser-btn.close { background: #ff5f57; }
+.browser-btn.minimize { background: #ffbd2e; }
+.browser-btn.maximize { background: #28c940; }
+
+.browser-address {
+    flex: 1;
+    background: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+}
+
+.browser-url {
+    color: #666;
+    font-size: 0.875rem;
+    font-family: 'SF Mono', Monaco, monospace;
+}
+
+.browser-content {
+    padding: 3rem;
+    text-align: center;
+}
+
+/* iPhone Frame */
+.iphone-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.iphone-frame {
+    background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 40px;
+    padding: 8px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.iphone-frame:hover {
+    transform: translateY(-8px);
+}
+
+.iphone-frame.mini {
+    max-width: 200px;
+}
+
+.iphone-notch {
+    width: 100px;
+    height: 28px;
+    background: #1a1a1a;
+    border-radius: 0 0 20px 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.iphone-screen {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--sky-light) 100%);
+    border-radius: 32px;
+    overflow: hidden;
+    aspect-ratio: 9/19;
+}
+
+.iphone-screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.iphone-content {
+    padding: 50px 16px 20px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.iphone-content .skill-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    color: var(--accent);
+}
+
+.iphone-content .skill-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.iphone-content h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.iphone-content p {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.iphone-home {
+    width: 40%;
+    height: 4px;
+    background: #444;
+    border-radius: 2px;
+    margin: 8px auto 0;
+}
+
+/* Apple Watch Frame */
+.watch-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.watch-frame {
+    width: 120px;
+    height: 150px;
+    background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 30px;
+    padding: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.watch-frame:hover {
+    transform: scale(1.05);
+}
+
+.watch-screen {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--accent-light) 100%);
+    border-radius: 22px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watch-content {
+    text-align: center;
+    padding: 12px;
+}
+
+.watch-content .stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+}
+
+.watch-content .stat-label {
+    font-size: 0.625rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+/* iPad Frame */
+.ipad-frame {
+    background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 24px;
+    padding: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.ipad-camera {
+    width: 10px;
+    height: 10px;
+    background: #3a3a3a;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+}
+
+.ipad-screen {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ipad-content {
+    padding: 3rem;
+}
+
+/* MacBook Air Frame */
+.macbook-air-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+}
+
+.macbook-air-frame {
+    transition: transform 0.3s ease;
+}
+
+.macbook-air-frame:hover {
+    transform: translateY(-4px);
+}
+
+.macbook-air-screen {
+    background: linear-gradient(180deg, #c0c0c0 0%, #a0a0a0 100%);
+    border-radius: 12px 12px 0 0;
+    padding: 8px 8px 0 8px;
+}
+
+.macbook-air-bezel {
+    height: 16px;
+    background: #2d2d2d;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+.macbook-air-bezel::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #3a3a3a;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.macbook-air-content {
+    background: #fff;
+    padding: 1.5rem;
+    min-height: 200px;
+}
+
+.macbook-air-base {
+    background: linear-gradient(180deg, #d4d4d4 0%, #b0b0b0 50%, #c4c4c4 100%);
+    height: 12px;
+    border-radius: 0 0 4px 4px;
+    margin: 0 20%;
+}
+
+/* iMac Frame */
+.imac-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.imac-frame {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.imac-frame:hover {
+    transform: translateY(-4px);
+}
+
+.imac-screen {
+    background: linear-gradient(180deg, #e8e8e8 0%, #d0d0d0 100%);
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.imac-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    min-height: 180px;
+    text-align: left;
+}
+
+.imac-stand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imac-stand::before {
+    content: '';
+    width: 60%;
+    height: 30px;
+    background: linear-gradient(180deg, #d0d0d0 0%, #c0c0c0 100%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.imac-foot {
+    width: 40%;
+    height: 8px;
+    background: linear-gradient(180deg, #c0c0c0 0%, #a0a0a0 100%);
+    border-radius: 0 0 4px 4px;
+}
+
+/* Studio Display Frame */
+.studio-display-frame {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.studio-display-screen {
+    background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.studio-display-content {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--sky-light) 50%, var(--paper-blue) 100%);
+    border-radius: 8px;
+    padding: 3rem;
+}
+
+.studio-display-stand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.studio-display-arm {
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(180deg, #c0c0c0 0%, #a0a0a0 100%);
+    border-radius: 4px;
+}
+
+.studio-display-base {
+    width: 200px;
+    height: 12px;
+    background: linear-gradient(180deg, #d0d0d0 0%, #b0b0b0 100%);
+    border-radius: 6px;
+    margin-top: -4px;
+}
+
+/* Section Headings */
+.skills-heading,
+.stats-heading,
+.details-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.skills-section,
+.details-section {
+    padding: 4rem 0;
+}
+
+/* Responsive Device Frames */
+@media (max-width: 1024px) {
+    .iphone-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .macbook-air-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .imac-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .iphone-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .iphone-frame {
+        border-radius: 28px;
+    }
+    
+    .iphone-notch {
+        width: 60px;
+        height: 20px;
+        border-radius: 0 0 12px 12px;
+    }
+    
+    .iphone-screen {
+        border-radius: 20px;
+    }
+    
+    .iphone-content {
+        padding: 36px 12px 16px;
+    }
+    
+    .iphone-content .skill-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .iphone-content h3 {
+        font-size: 0.75rem;
+    }
+    
+    .iphone-content p {
+        font-size: 0.625rem;
+    }
+    
+    .watch-grid {
+        gap: 1rem;
+    }
+    
+    .watch-frame {
+        width: 90px;
+        height: 110px;
+        border-radius: 22px;
+    }
+    
+    .watch-content .stat-number {
+        font-size: 1.25rem;
+    }
+    
+    .browser-content {
+        padding: 1.5rem;
+    }
+    
+    .ipad-content {
+        padding: 1.5rem;
+    }
+    
+    .macbook-air-content {
+        padding: 1rem;
+    }
+    
+    .imac-content {
+        padding: 1rem;
+    }
+    
+    .studio-display-content {
+        padding: 2rem 1rem;
+    }
+}
+
