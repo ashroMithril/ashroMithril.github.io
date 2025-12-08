@@ -8,13 +8,10 @@
     <link rel="icon" href="icon.svg" type="image/svg+xml">
 </head>
 <body>
-    <!-- Sky Blue Cellular Background -->
-    <canvas id="cellular-bg"></canvas>
-
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Apoorva Shrivastava</a>
+            <a href="index.html" class="nav-logo">AS</a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
@@ -24,414 +21,213 @@
         </div>
     </nav>
 
-    <!-- Hero Section - MacBook Pro Frame -->
-    <section class="hero">
-        <div class="macbook-frame hero-device">
-            <div class="macbook-screen">
-                <div class="macbook-notch"></div>
-                <div class="macbook-content">
-                    <video 
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3289-zUf3JyNeUnmGWdK8NQzRcjKXhkaEZz.mov"
-                        autoplay loop muted playsinline
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-                    ></video>
-                    <img 
-                        src="images/apoorva-profile.jpg" 
-                        alt="Apoorva Shrivastava"
-                        style="display: none;"
-                    >
-                </div>
-            </div>
-            <div class="macbook-base">
-                <div class="macbook-keyboard"></div>
-            </div>
+    <!-- Hero Bento Grid -->
+    <section class="hero-bento">
+        <div class="bento-card bento-intro">
+            <span class="bento-eyebrow">Senior Product Manager</span>
+            <h1>Apoorva<br>Shrivastava</h1>
+            <p>Building GenAI-first products that transform how teams work.</p>
         </div>
         
-        <div class="hero-content">
-            <div class="hero-badge">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                </svg>
-                <span>Senior Product Manager - GenAI</span>
-            </div>
-            <h1 class="hero-title">Apoorva Shrivastava</h1>
+        <div class="bento-card bento-video">
+            <video 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3289-zUf3JyNeUnmGWdK8NQzRcjKXhkaEZz.mov"
+                autoplay loop muted playsinline
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            ></video>
+            <img src="images/apoorva-profile.jpg" alt="Apoorva" style="display: none;">
         </div>
-
-        <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="scroll-mouse">
-                <div class="scroll-wheel"></div>
-            </div>
+        
+        <div class="bento-card bento-stat">
+            <span class="stat-big">7+</span>
+            <span class="stat-desc">Years in Product</span>
+        </div>
+        
+        <div class="bento-card bento-stat">
+            <span class="stat-big">70+</span>
+            <span class="stat-desc">Integrations</span>
+        </div>
+        
+        <div class="bento-card bento-cta">
+            <a href="projects.html" class="btn btn-primary">View Work →</a>
+            <a href="contact.html" class="btn btn-ghost">Say Hello</a>
+        </div>
+        
+        <div class="bento-card bento-quote">
+            <blockquote>"Transforming flow-based automation into prompt-first agent experiences"</blockquote>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Introduction Section - Browser Window Frame -->
-        <section class="section">
-            <div class="browser-frame">
-                <div class="browser-header">
-                    <div class="browser-buttons">
-                        <span class="browser-btn close"></span>
-                        <span class="browser-btn minimize"></span>
-                        <span class="browser-btn maximize"></span>
+    <!-- Story Section -->
+    <main class="story">
+        <!-- Chapter 1: What I Do -->
+        <section class="chapter">
+            <div class="chapter-marker">
+                <span class="chapter-num">01</span>
+                <span class="chapter-line"></span>
+            </div>
+            <div class="chapter-content">
+                <h2>What I Do</h2>
+                <p class="lead">
+                    I transform <em>complex automation workflows</em> into <em>intuitive AI experiences</em>. 
+                    Currently leading GenAI product strategy for enterprise SaaS platforms.
+                </p>
+                
+                <div class="capabilities-bento">
+                    <div class="cap-card">
+                        <span class="cap-num">01</span>
+                        <h3>Product Strategy</h3>
+                        <p>End-to-end ownership from hypothesis to GTM launch</p>
                     </div>
-                    <div class="browser-address">
-                        <span class="browser-url">apoorva.dev/about</span>
+                    <div class="cap-card">
+                        <span class="cap-num">02</span>
+                        <h3>GenAI & Agents</h3>
+                        <p>LLM-powered products and conversational interfaces</p>
+                    </div>
+                    <div class="cap-card cap-card-wide">
+                        <span class="cap-num">03</span>
+                        <h3>PLG & Growth</h3>
+                        <p>Freemium funnels, activation optimization, and self-serve experiences</p>
+                    </div>
+                    <div class="cap-card">
+                        <span class="cap-num">04</span>
+                        <h3>Integrations</h3>
+                        <p>API ecosystems and platform partnerships</p>
                     </div>
                 </div>
-                <div class="browser-content">
-                    <div class="section-badge">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
-                        <span>7+ Years in AI Product Leadership</span>
+            </div>
+        </section>
+
+        <!-- Chapter 2: About -->
+        <section class="chapter">
+            <div class="chapter-marker">
+                <span class="chapter-num">02</span>
+                <span class="chapter-line"></span>
+            </div>
+            <div class="chapter-content">
+                <h2>About Me</h2>
+                
+                <div class="about-bento">
+                    <div class="about-text-card">
+                        <p>
+                            Started in research and molecular simulations, then moved into enterprise product 
+                            roles where I learned to balance rigor with speed.
+                        </p>
+                        <p>
+                            I love solving product problems end-to-end—from hypothesis and metrics to UX 
+                            and go-to-market. Currently leading the transformation of flow-based automation 
+                            platforms into conversational, prompt-first agent experiences.
+                        </p>
                     </div>
+                    <div class="about-video-card">
+                        <video 
+                            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6576-jnNKAxNefGCxOdFL1SzARLmBJJzHU5.mov"
+                            autoplay loop muted playsinline
+                        ></video>
+                    </div>
+                    <div class="about-edu-card">
+                        <span class="card-label">Education</span>
+                        <h4>IIT Patna</h4>
+                        <p>B.Tech Chemical Sciences</p>
+                        <p class="muted">Minor: AI & Entrepreneurship</p>
+                        <p class="muted">2014–2018 · 8.31 CGPA</p>
+                    </div>
+                    <div class="about-fun-card">
+                        <span class="card-label">Beyond Work</span>
+                        <p>Traveled to 5 countries and 20+ states in India. Developed an obsession with organization—my UX eye now extends to physical spaces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <h2 class="section-title">Building GenAI-First Products That Transform Workflows</h2>
+        <!-- Chapter 3: Toolkit -->
+        <section class="chapter">
+            <div class="chapter-marker">
+                <span class="chapter-num">03</span>
+                <span class="chapter-line"></span>
+            </div>
+            <div class="chapter-content">
+                <h2>Toolkit</h2>
+                
+                <div class="toolkit-bento">
+                    <div class="toolkit-card toolkit-tools">
+                        <span class="card-label">Tools I Use</span>
+                        <div class="tool-tags">
+                            <span class="tool-tag highlighted">Jira</span>
+                            <span class="tool-tag highlighted">Figma</span>
+                            <span class="tool-tag highlighted">Miro</span>
+                            <span class="tool-tag">Notion</span>
+                            <span class="tool-tag">Confluence</span>
+                            <span class="tool-tag">Productboard</span>
+                            <span class="tool-tag">Amplitude</span>
+                            <span class="tool-tag">Mixpanel</span>
+                            <span class="tool-tag highlighted">V0</span>
+                            <span class="tool-tag highlighted">Cursor</span>
+                        </div>
+                        <p class="toolkit-note">
+                            One skill I'm letting go of: writing PRDs from scratch. It's prototypes, research drafts, or templates now.
+                        </p>
+                    </div>
+                    <div class="toolkit-card toolkit-skills">
+                        <span class="card-label">Core Skills</span>
+                        <div class="skill-list">
+                            <span>Product strategy</span>
+                            <span>Roadmapping</span>
+                            <span>User research</span>
+                            <span>Data analysis</span>
+                            <span>SQL</span>
+                            <span>A/B testing</span>
+                            <span>API knowledge</span>
+                            <span>AI/LLM fundamentals</span>
+                            <span>Prompt engineering</span>
+                            <span>UX intuition</span>
+                            <span>GTM planning</span>
+                            <span>Leadership</span>
+                        </div>
+                    </div>
+                    <div class="toolkit-card toolkit-stats">
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">5%</span>
+                            <span class="mini-stat-label">Freemium Conversion</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">15+</span>
+                            <span class="mini-stat-label">Enterprise Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <p class="section-description">
-                        Product leader shipping AI-empowered products across SaaS enterprise platforms. Pioneered the transformation of
-                        <span class="highlight">flow-based automation into prompt-first agent experiences</span> at scale.
-                    </p>
-
-                    <div class="button-group">
-                        <a href="projects.html" class="btn btn-primary">
-                            View My Work
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
+        <!-- Final CTA -->
+        <section class="chapter chapter-cta">
+            <div class="chapter-marker">
+                <span class="chapter-num">✦</span>
+                <span class="chapter-line"></span>
+            </div>
+            <div class="chapter-content">
+                <div class="final-cta">
+                    <h2>Let's build something together</h2>
+                    <p>Open to discussing product strategy, AI applications, or just grabbing coffee.</p>
+                    <div class="cta-buttons">
+                        <a href="https://calendly.com/apoorvakshri/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                            Schedule a Chat →
                         </a>
-                        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                        <a href="projects.html" class="btn btn-ghost">View Case Studies</a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Grid - iPhone Frames -->
-        <section class="skills-section">
-            <h2 class="skills-heading">Core Expertise</h2>
-            <div class="iphone-grid">
-                <div class="iphone-frame">
-                    <div class="iphone-notch"></div>
-                    <div class="iphone-screen">
-                        <div class="iphone-content">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <circle cx="12" cy="12" r="6"></circle>
-                                    <circle cx="12" cy="12" r="2"></circle>
-                                </svg>
-                            </div>
-                            <h3>Product Strategy</h3>
-                            <p>End-to-end ownership from vision to execution</p>
-                        </div>
-                    </div>
-                    <div class="iphone-home"></div>
-                </div>
-
-                <div class="iphone-frame">
-                    <div class="iphone-notch"></div>
-                    <div class="iphone-screen">
-                        <div class="iphone-content">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                                    <line x1="12" y1="19" x2="12" y2="22"></line>
-                                </svg>
-                            </div>
-                            <h3>GenAI & Agents</h3>
-                            <p>LLM orchestration & prompt engineering</p>
-                        </div>
-                    </div>
-                    <div class="iphone-home"></div>
-                </div>
-
-                <div class="iphone-frame">
-                    <div class="iphone-notch"></div>
-                    <div class="iphone-screen">
-                        <div class="iphone-content">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                                </svg>
-                            </div>
-                            <h3>PLG & Growth</h3>
-                            <p>5% freemium conversion achieved</p>
-                        </div>
-                    </div>
-                    <div class="iphone-home"></div>
-                </div>
-
-                <div class="iphone-frame">
-                    <div class="iphone-notch"></div>
-                    <div class="iphone-screen">
-                        <div class="iphone-content">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                </svg>
-                            </div>
-                            <h3>Integrations</h3>
-                            <p>70+ marketplace integrations launched</p>
-                        </div>
-                    </div>
-                    <div class="iphone-home"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Section - Apple Watch Frames -->
-        <section class="stats-section">
-            <h2 class="stats-heading">By The Numbers</h2>
-            <div class="watch-grid">
-                <div class="watch-frame">
-                    <div class="watch-screen">
-                        <div class="watch-content">
-                            <div class="stat-number">7+</div>
-                            <div class="stat-label">Years in SaaS</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="watch-frame">
-                    <div class="watch-screen">
-                        <div class="watch-content">
-                            <div class="stat-number">70+</div>
-                            <div class="stat-label">Integrations</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="watch-frame">
-                    <div class="watch-screen">
-                        <div class="watch-content">
-                            <div class="stat-number">5%</div>
-                            <div class="stat-label">Conversion</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="watch-frame">
-                    <div class="watch-screen">
-                        <div class="watch-content">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Enterprise</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Me Section - iPad Frame -->
-        <section class="section about-section">
-            <div class="ipad-frame">
-                <div class="ipad-camera"></div>
-                <div class="ipad-screen">
-                    <div class="ipad-content">
-                        <div class="section-badge">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                            </svg>
-                            <span>Get to know me</span>
-                        </div>
-
-                        <h2 class="section-title">About Me</h2>
-                        <p class="section-description">
-                            I craft product roadmaps and ship AI-first experiences that help companies automate complex customer journeys
-                        </p>
-
-                        <div class="about-grid">
-                            <div class="about-text">
-                                <p>
-                                    I started out in research and molecular simulations, then moved into enterprise product roles where I
-                                    learned to balance rigor with speed. I love solving product problems end-to-end - from hypothesis and
-                                    metrics to UX and go-to-market.
-                                </p>
-                                <p>
-                                    Currently, I'm leading the transformation of flow-based automation platforms into conversational,
-                                    prompt-first agent experiences. This involves rethinking how both technical and non-technical users
-                                    interact with AI, building robust prompting layers, and enabling multimodal interactions that work
-                                    across channels.
-                                </p>
-                            </div>
-                            <div class="about-video">
-                                <div class="iphone-frame mini">
-                                    <div class="iphone-notch"></div>
-                                    <div class="iphone-screen">
-                                        <video 
-                                            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6576-jnNKAxNefGCxOdFL1SzARLmBJJzHU5.mov"
-                                            autoplay loop muted playsinline
-                                        ></video>
-                                    </div>
-                                    <div class="iphone-home"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Details - MacBook Air Frames -->
-        <section class="details-section">
-            <h2 class="details-heading">Skills & Background</h2>
-            <div class="macbook-air-grid">
-                <!-- Tools -->
-                <div class="macbook-air-frame">
-                    <div class="macbook-air-screen">
-                        <div class="macbook-air-bezel"></div>
-                        <div class="macbook-air-content">
-                            <div class="detail-header">
-                                <div class="detail-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                                    </svg>
-                                </div>
-                                <h3>Tools</h3>
-                            </div>
-                            <div class="badge-group">
-                                <span class="badge badge-primary">Jira</span>
-                                <span class="badge badge-primary">Figma</span>
-                                <span class="badge badge-primary">Miro</span>
-                                <span class="badge">Notion</span>
-                                <span class="badge">Confluence</span>
-                                <span class="badge">Productboard</span>
-                                <span class="badge">Amplitude</span>
-                                <span class="badge">Mixpanel</span>
-                                <span class="badge badge-primary">V0</span>
-                                <span class="badge badge-primary">Cursor</span>
-                            </div>
-                            <p class="detail-note">
-                                One skill I'm letting go of: writing PRDs from scratch. It's either prototypes or AI drafts now.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="macbook-air-base"></div>
-                </div>
-
-                <!-- Core Capabilities -->
-                <div class="macbook-air-frame">
-                    <div class="macbook-air-screen">
-                        <div class="macbook-air-bezel"></div>
-                        <div class="macbook-air-content">
-                            <div class="detail-header">
-                                <div class="detail-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
-                                        <path d="M9 18h6"></path>
-                                        <path d="M10 22h4"></path>
-                                    </svg>
-                                </div>
-                                <h3>Core Capabilities</h3>
-                            </div>
-                            <div class="badge-group">
-                                <span class="badge badge-outline">Product strategy</span>
-                                <span class="badge badge-outline">Roadmapping</span>
-                                <span class="badge badge-outline">User research</span>
-                                <span class="badge badge-outline">Data analysis</span>
-                                <span class="badge badge-outline">SQL</span>
-                                <span class="badge badge-outline">A/B testing</span>
-                                <span class="badge badge-outline">AI/LLM</span>
-                                <span class="badge badge-outline">Prompt engineering</span>
-                                <span class="badge badge-outline">GTM planning</span>
-                                <span class="badge badge-outline">Leadership</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="macbook-air-base"></div>
-                </div>
-            </div>
-
-            <!-- Education & Beyond Work - iMac Frames -->
-            <div class="imac-grid">
-                <div class="imac-frame">
-                    <div class="imac-screen">
-                        <div class="imac-content">
-                            <div class="detail-header">
-                                <div class="detail-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                                    </svg>
-                                </div>
-                                <h3>Education</h3>
-                            </div>
-                            <p class="education-school">IIT Patna</p>
-                            <p class="education-degree">B.Tech in Chemical Sciences</p>
-                            <p class="education-details">Minor: AI & Entrepreneurship</p>
-                            <p class="education-details">2014-2018 | CGPA: 8.31/10</p>
-                        </div>
-                    </div>
-                    <div class="imac-stand">
-                        <div class="imac-foot"></div>
-                    </div>
-                </div>
-
-                <div class="imac-frame">
-                    <div class="imac-screen">
-                        <div class="imac-content">
-                            <div class="detail-header">
-                                <div class="detail-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                    </svg>
-                                </div>
-                                <h3>Beyond Work</h3>
-                            </div>
-                            <p>
-                                🌍 Traveled to 5 countries & 20+ states in India
-                            </p>
-                            <p>
-                                ✨ Design enthusiast with an eye for UI/UX cleanliness that extends to physical spaces
-                            </p>
-                        </div>
-                    </div>
-                    <div class="imac-stand">
-                        <div class="imac-foot"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section - Studio Display Frame -->
-        <section class="cta-section">
-            <div class="studio-display-frame">
-                <div class="studio-display-screen">
-                    <div class="studio-display-content">
-                        <div class="section-badge">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                            </svg>
-                            <span>Let's connect</span>
-                        </div>
-
-                        <h2 class="section-title">Ready to Chat?</h2>
-                        <p class="section-description">
-                            I design GenAI-first products that convert automation into measurable business outcomes.
-                        </p>
-
-                        <div class="button-group">
-                            <a href="https://calendly.com/apoorvakshri/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Schedule a Quick Chat
-                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </a>
-                            <a href="projects.html" class="btn btn-secondary">View Case Studies</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="studio-display-stand">
-                    <div class="studio-display-arm"></div>
-                    <div class="studio-display-base"></div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <span>Apoorva Shrivastava</span>
+            <span class="footer-dot">·</span>
+            <span>Senior Product Manager</span>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

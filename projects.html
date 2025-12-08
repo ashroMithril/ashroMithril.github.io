@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects & Experience - Apoorva Shrivastava</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="projects.css">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
 </head>
 <body>
-    <canvas id="cellular-bg"></canvas>
-
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Apoorva Shrivastava</a>
+            <a href="index.html" class="nav-logo">AS</a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="projects.html" class="nav-link active">Projects</a></li>
@@ -24,148 +21,105 @@
         </div>
     </nav>
 
-    <main class="main-content projects-page">
-        <div class="projects-container">
-            <div class="page-header">
-                <h1>Projects & Experience</h1>
-                <p>7+ years shipping GenAI-first products across enterprise SaaS platforms</p>
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <span class="page-eyebrow">Work & Impact</span>
+            <h1>Projects &<br>Experience</h1>
+            <p>7+ years shipping GenAI-first products across enterprise SaaS platforms</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="story">
+        <!-- Chapter 1: Experience -->
+        <section class="chapter">
+            <div class="chapter-marker">
+                <span class="chapter-num">01</span>
+                <span class="chapter-line"></span>
             </div>
-
-            <!-- Professional Experience -->
-            <section class="experience-section">
-                <div class="section-header">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                    </svg>
-                    <h2>Professional Experience</h2>
-                </div>
-
-                <div class="accordion">
-                    <!-- Yellow.ai - Sr. PM - MacBook Frame -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="job-header">
-                                <h3>Senior Product Manager - GenAI</h3>
-                                <p class="company">
-                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    </svg>
-                                    Yellow.ai, Abu Dhabi
-                                </p>
-                                <span class="date-badge">Apr 2021 - Present</span>
-                            </div>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Leading the transformation from flow-based builders to conversational, prompt-first agent experiences.</p>
-                            <div class="achievements-grid">
-                                <div>
-                                    <h4>Achievements</h4>
-                                    <ul>
-                                        <li>Prompt-first agent builder</li>
-                                        <li>80%+ deflection rate</li>
-                                        <li>70+ integrations</li>
-                                    </ul>
-                                </div>
-                            </div>
+            <div class="chapter-content">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-bento">
+                    <!-- Yellow.ai Sr PM -->
+                    <div class="exp-card exp-card-featured">
+                        <div class="exp-header">
+                            <span class="exp-date">Apr 2021 - Present</span>
+                            <span class="exp-current">Current</span>
+                        </div>
+                        <h3>Senior Product Manager - GenAI</h3>
+                        <p class="exp-company">Yellow.ai · Abu Dhabi</p>
+                        <p class="exp-desc">Leading the transformation from flow-based builders to conversational, prompt-first agent experiences.</p>
+                        <div class="exp-highlights">
+                            <span>Prompt-first agent builder</span>
+                            <span>80%+ deflection rate</span>
+                            <span>70+ integrations</span>
                         </div>
                     </div>
-
-                    <!-- Yellow Messenger - PM Growth - MacBook Frame -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="job-header">
-                                <h3>Product Manager - Growth</h3>
-                                <p class="company">
-                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    </svg>
-                                    Yellow Messenger, Bangalore
-                                </p>
-                                <span class="date-badge">Apr 2020 - Apr 2021</span>
-                            </div>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Achieved 5% conversion from inbound traffic through targeted freemium mechanics.</p>
-                            <div class="achievements-grid">
-                                <div>
-                                    <h4>Achievements</h4>
-                                    <ul>
-                                        <li>5% inbound conversion</li>
-                                        <li>Automated payments</li>
-                                        <li>PLG motion</li>
-                                    </ul>
-                                </div>
-                            </div>
+                    
+                    <!-- Yellow Messenger PM -->
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <span class="exp-date">Apr 2020 - Apr 2021</span>
+                        </div>
+                        <h3>Product Manager - Growth</h3>
+                        <p class="exp-company">Yellow Messenger · Bangalore</p>
+                        <p class="exp-desc">Achieved 5% conversion from inbound traffic through targeted freemium mechanics.</p>
+                        <div class="exp-highlights">
+                            <span>5% conversion</span>
+                            <span>PLG motion</span>
                         </div>
                     </div>
-
-                    <!-- Accenture - MacBook Frame -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="job-header">
-                                <h3>Business Analyst</h3>
-                                <p class="company">
-                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    </svg>
-                                    Accenture, Bangalore
-                                </p>
-                                <span class="date-badge">Sep 2018 - Mar 2020</span>
-                            </div>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Delivered advanced technology solutions for enterprise clients using AI and AR/VR.</p>
-                            <div class="achievements-grid">
-                                <div>
-                                    <h4>Achievements</h4>
-                                    <ul>
-                                        <li>15+ enterprise clients</li>
-                                        <li>AI & AR/VR solutions</li>
-                                        <li>Innovation Hub</li>
-                                    </ul>
-                                </div>
-                            </div>
+                    
+                    <!-- Accenture -->
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <span class="exp-date">Sep 2018 - Mar 2020</span>
+                        </div>
+                        <h3>Business Analyst</h3>
+                        <p class="exp-company">Accenture · Bangalore</p>
+                        <p class="exp-desc">Delivered advanced technology solutions for enterprise clients using AI and AR/VR.</p>
+                        <div class="exp-highlights">
+                            <span>15+ clients</span>
+                            <span>AI & AR/VR</span>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Key Projects -->
-            <section class="projects-section">
-                <div class="section-header">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="3"></circle>
-                        <path d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m0 6l-4.2 4.2M23 12h-6m-6 0H5m13.2 5.2l-4.2-4.2m0-6l-4.2-4.2"></path>
-                    </svg>
-                    <h2>Detailed Case Studies</h2>
-                </div>
-
-                <div class="accordion">
-                    <!-- Prompt-First Agent Builder -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
+        <!-- Chapter 2: Case Studies -->
+        <section class="chapter">
+            <div class="chapter-marker">
+                <span class="chapter-num">02</span>
+                <span class="chapter-line"></span>
+            </div>
+            <div class="chapter-content">
+                <h2>Detailed Case Studies</h2>
+                <p class="lead">Click on any project to expand and see the full details.</p>
+                
+                <div class="case-accordion">
+                    <!-- Case Study 1: Prompt-First Agent Builder -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
                                 <h3>Prompt-First Agent Builder</h3>
-                                <p class="project-subtitle">Transforming flow-based automation into conversational AI agents</p>
+                                <p>Transforming flow-based automation into conversational AI agents</p>
                             </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <span class="case-trigger-icon">+</span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
                                     <h4>The Problem</h4>
                                     <p>Traditional flow-based builders created fragmentation and required technical expertise. Customers struggled to maintain complex conversation flows, and non-technical users couldn't easily adapt agents to changing needs.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>My Role</h4>
                                     <p>Led the product vision and roadmap to convert Yellow.ai's core platform into a prompt-first agent builder. Defined user journeys, acceptance criteria, and worked closely with engineering and design to ship the new experience.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Approach</h4>
                                     <ul>
                                         <li>Conducted user research with 20+ customers to understand pain points</li>
@@ -174,46 +128,40 @@
                                         <li>Created comprehensive testing framework and rollout plan</li>
                                     </ul>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Outcome</h4>
                                     <p>Successfully launched the new agent builder as the core SaaS capability. <strong>Reduced time-to-value for customers</strong> and improved agent maintainability. The platform now supports prompt-first interactions across multiple channels.</p>
                                 </div>
                             </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge">GenAI</span>
-                                <span class="badge">Product Strategy</span>
-                                <span class="badge">UX Design</span>
-                                <span class="badge">Prompt Engineering</span>
+                            <div class="case-tags">
+                                <span class="case-tag">GenAI</span>
+                                <span class="case-tag">Product Strategy</span>
+                                <span class="case-tag">UX Design</span>
+                                <span class="case-tag">Prompt Engineering</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Orchestrator LLM -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
+                    <!-- Case Study 2: Orchestrator LLM -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
                                 <h3>Orchestrator LLM - Conversation Experience Revolution</h3>
-                                <p class="project-subtitle">Increased deflection rate from 60% to 80%+, now powering 100% of platform bots</p>
+                                <p>Increased deflection rate from 60% to 80%+, now powering 100% of platform bots</p>
                             </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <span class="case-trigger-icon">+</span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
                                     <h4>Context & Role</h4>
                                     <p>Led the technology shift from NLP to LLM-based workflow identification to dramatically improve conversation quality and ticket deflection rates. This was a platform-wide transformation affecting all customer bots.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Problem & Opportunity</h4>
                                     <p>Around 40%+ undeflected tickets were going to fallback due to poor intent identification, inability to handle context switching, and irrelevant small talk responses. Analysis of multiple bot conversations revealed massive UX gaps.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Actions Taken</h4>
                                     <ul>
                                         <li>Interviewed analysts and implementation engineers, documenting UX failures</li>
@@ -223,52 +171,45 @@
                                         <li>Shipped initial version in weeks by leveraging existing node architecture</li>
                                     </ul>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Results & Impact</h4>
                                     <p><strong>Increased deflection rate to 80%+ from existing 60%.</strong> Saw immediate increase in customer CSAT scores and brand NPS. Today, <strong>100% of platform bots run on Orchestrator LLM</strong> - both old bots migrated from NLP and all new bots built on this foundation.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Learnings</h4>
                                     <p>The combination of Dynamic Chat Node for personalized messaging and Orchestrator LLM for intelligent routing created a step-function improvement in conversation quality. Rapid deployment by fitting into existing node architecture accelerated adoption.</p>
                                 </div>
                             </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge">Orchestrator LLM</span>
-                                <span class="badge">80%+ Deflection</span>
-                                <span class="badge">NLP → LLM Migration</span>
-                                <span class="badge">Platform-wide</span>
-                                <span class="badge">CSAT Improvement</span>
+                            <div class="case-tags">
+                                <span class="case-tag">Orchestrator LLM</span>
+                                <span class="case-tag">80%+ Deflection</span>
+                                <span class="case-tag">NLP → LLM Migration</span>
+                                <span class="case-tag">Platform-wide</span>
+                                <span class="case-tag">CSAT Improvement</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Multithreaded, Multimodal Omnichannel Platform -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
+                    <!-- Case Study 3: Omnichannel Platform -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
                                 <h3>Multithreaded, Multimodal Omnichannel Platform</h3>
-                                <p class="project-subtitle">True omnichannel architecture with unified conversation continuity across all channels</p>
+                                <p>True omnichannel architecture with unified conversation continuity across all channels</p>
                             </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <span class="case-trigger-icon">+</span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
                                     <h4>Core Architecture</h4>
                                     <p>Architected the core omnichannel model: unified conversation ID, per-channel events store, and thread-level state so users can seamlessly continue any thread across email, chat, voice, and attachments without losing context.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Multimodal NLU Stack</h4>
                                     <p>Merged embeddings from text, OCR, and voice transcripts into a single semantic layer enabling cross-modal retrieval, intent detection, and similarity search for rapid KB responses.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Key Capabilities</h4>
                                     <ul>
                                         <li>Channel continuity and session transfer: single-session continuity for chat-to-voice and email-to-chat handoffs</li>
@@ -278,52 +219,45 @@
                                         <li>Enterprise controls: feature flags per-channel, policy-driven routing, RBAC, tenant-level configuration</li>
                                     </ul>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Business Impact</h4>
                                     <p>Enabled truly omnichannel support journeys that reduce customer friction, reduce redundant follow-ups, and let automation operate safely at thread granularity. Customers can run concurrent threads across multiple channels while preserving context, SLAs, and compliance.</p>
                                 </div>
                             </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge">Omnichannel</span>
-                                <span class="badge">Thread Management</span>
-                                <span class="badge">Multimodal NLU</span>
-                                <span class="badge">Session Transfer</span>
-                                <span class="badge">Enterprise Architecture</span>
+                            <div class="case-tags">
+                                <span class="case-tag">Omnichannel</span>
+                                <span class="case-tag">Thread Management</span>
+                                <span class="case-tag">Multimodal NLU</span>
+                                <span class="case-tag">Session Transfer</span>
+                                <span class="case-tag">Enterprise Architecture</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Email Automation -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
+                    <!-- Case Study 4: Email Automation -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
                                 <h3>Email Automation for Support - Multithreaded, Multimodal Orchestration</h3>
-                                <p class="project-subtitle">80%+ resolution rate within 1 week of launch</p>
+                                <p>80%+ resolution rate within 1 week of launch</p>
                             </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <span class="case-trigger-icon">+</span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
                                     <h4>Context & Role</h4>
                                     <p>Automate support conversations over email - one of the most used channels by enterprise support systems. Over 50% of support conversations were either happening in email directly or converted into email tickets. Led as PM with one senior dev for MVP, then 2 SDEs, designer, and shared QA for full product.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Problem & Opportunity</h4>
                                     <p>Huge bulky emails with massive volumes - companies with 100 agents and 50k monthly tickets ended up with 500 emails per agent. This led to delayed responses, inconsistent handling, and poor customer experience. Before LLMs, extracting entities from emails was nearly impossible.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Constraints & Hypothesis</h4>
                                     <p>Half a quarter to experiment and prove results or discontinue. User interviews revealed additional needs: analytics on emails, no full automation initially - just analytics and draft email responses for agents. Hypothesis: KB-based automation could achieve 80%+ resolution rate.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Actions Taken</h4>
                                     <ul>
                                         <li>Built MVP in one month: KB-based automation tackling huge multi-intent emails, noise clearing, segmenting</li>
@@ -333,46 +267,40 @@
                                         <li>Launched marketing campaigns specifically for email automation</li>
                                     </ul>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Results & Impact</h4>
                                     <p><strong>Achieved 80%+ resolution rate within 1 week of launch.</strong> Secured first million-dollar deals. Feature set expanded to include multi-thread handling, multi-intent processing, OCR for attachments, and seamless agent handoffs.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Learnings</h4>
                                     <p>User research uncovered that customers initially wanted analytics and drafting rather than full automation. Starting with KB-based automation proved the concept quickly, then iteratively added multimodal capabilities.</p>
                                 </div>
                             </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge">Email Automation</span>
-                                <span class="badge">Multimodal AI</span>
-                                <span class="badge">80%+ Resolution</span>
-                                <span class="badge">Thread Management</span>
+                            <div class="case-tags">
+                                <span class="case-tag">Email Automation</span>
+                                <span class="case-tag">Multimodal AI</span>
+                                <span class="case-tag">80%+ Resolution</span>
+                                <span class="case-tag">Thread Management</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Customizable Agent Assist Platform -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
+                    <!-- Case Study 5: Agent Assist -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
                                 <h3>Customizable Agent Assist Platform</h3>
-                                <p class="project-subtitle">Real-time AI assistance for support agents across Yellow.ai and third-party CRMs</p>
+                                <p>Real-time AI assistance for support agents across Yellow.ai and third-party CRMs</p>
                             </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <span class="case-trigger-icon">+</span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
                                     <h4>Overview</h4>
                                     <p>Productized a fully customizable agent-assist layer that plugs into Yellow.ai and third-party CRMs (Salesforce, Zendesk, ServiceNow) via lightweight connector SDKs and webhook APIs.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Key Features</h4>
                                     <ul>
                                         <li>Multilayer suggestion engine with configurable confidence thresholds for auto-apply vs. soft suggestions</li>
@@ -382,42 +310,37 @@
                                         <li>Partner SDK ecosystem with sample apps and certification program reducing integration time by 60%</li>
                                     </ul>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Impact</h4>
                                     <p>Pilot deployments reported <strong>25-40% reduction in average handle time</strong> and <strong>10-20 point improvement in agent satisfaction</strong>, enabling enterprise customers to realize significant cost savings through higher automation confidence.</p>
                                 </div>
                             </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge">AI Assistance</span>
-                                <span class="badge">CRM Integration</span>
-                                <span class="badge">Real-time</span>
-                                <span class="badge">Compliance</span>
-                                <span class="badge">Partner SDKs</span>
+                            <div class="case-tags">
+                                <span class="case-tag">AI Assistance</span>
+                                <span class="case-tag">CRM Integration</span>
+                                <span class="case-tag">Real-time</span>
+                                <span class="case-tag">Compliance</span>
+                                <span class="case-tag">Partner SDKs</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Integrations & Marketplace -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
+                    <!-- Case Study 6: Integrations -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
                                 <h3>Integrations & Marketplace Scale (70+ integrations)</h3>
-                                <p class="project-subtitle">Launching 70+ integrations to connect AI agents with revenue systems</p>
+                                <p>Launching 70+ integrations to connect AI agents with revenue systems</p>
                             </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <span class="case-trigger-icon">+</span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
                                     <h4>The Problem</h4>
                                     <p>Customers needed to connect their AI agents to existing CRM, payments, and data systems. Without these integrations, agents existed in isolation and couldn't drive real business outcomes.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Execution</h4>
                                     <ul>
                                         <li>Orchestrated roadmap for 70+ marketplace integrations</li>
@@ -426,41 +349,36 @@
                                         <li>Created marketplace UI and developer documentation</li>
                                     </ul>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Outcome</h4>
                                     <p>Enabled customers to connect automation to their existing revenue and data systems, significantly increasing platform stickiness and customer lifetime value.</p>
                                 </div>
                             </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge badge-outline">Integrations</span>
-                                <span class="badge badge-outline">API Design</span>
-                                <span class="badge badge-outline">Marketplace</span>
-                                <span class="badge badge-outline">Partnerships</span>
+                            <div class="case-tags">
+                                <span class="case-tag outlined">Integrations</span>
+                                <span class="case-tag outlined">API Design</span>
+                                <span class="case-tag outlined">Marketplace</span>
+                                <span class="case-tag outlined">Partnerships</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Freemium & PLG -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
+                    <!-- Case Study 7: PLG -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
                                 <h3>Freemium & Product-Led Growth (PLG)</h3>
-                                <p class="project-subtitle">5% conversion from inbound traffic to paying customers</p>
+                                <p>5% conversion from inbound traffic to paying customers</p>
                             </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <span class="case-trigger-icon">+</span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
                                     <h4>The Challenge</h4>
                                     <p>The platform relied heavily on sales-led motion. We needed to create a self-serve path that would convert inbound interest into paying customers without sales intervention.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Strategy</h4>
                                     <ul>
                                         <li>Designed freemium tier with strategic feature gating</li>
@@ -469,84 +387,40 @@
                                         <li>Implemented trial mechanics with clear upgrade prompts</li>
                                     </ul>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Results</h4>
                                     <p>Achieved <strong>5% conversion rate</strong> from inbound traffic to paying customers, seeding ongoing PLG motion for the platform and reducing customer acquisition costs.</p>
                                 </div>
                             </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge badge-outline">PLG</span>
-                                <span class="badge badge-outline">Freemium</span>
-                                <span class="badge badge-outline">Growth</span>
-                                <span class="badge badge-outline">Analytics</span>
+                            <div class="case-tags">
+                                <span class="case-tag outlined">PLG</span>
+                                <span class="case-tag outlined">Freemium</span>
+                                <span class="case-tag outlined">Growth</span>
+                                <span class="case-tag outlined">Analytics</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Payments & Pricing Strategy -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
-                                <h3>Payments & Pricing Strategy</h3>
-                                <p class="project-subtitle">End-to-end payments automation and revenue optimization</p>
-                            </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
-                                    <h4>Scope</h4>
-                                    <p>Led comprehensive work on pricing and packaging strategy, payments infrastructure, and billing automation. Connected product usage to revenue through telemetry and analytics.</p>
-                                </div>
-                                
-                                <div class="detail-section">
-                                    <h4>Key Deliverables</h4>
-                                    <ul>
-                                        <li>Pricing model based on usage patterns and customer segments</li>
-                                        <li>Automated billing and payments infrastructure</li>
-                                        <li>Revenue telemetry and reporting dashboards</li>
-                                        <li>Self-serve upgrade and payment flows</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge badge-outline">Pricing</span>
-                                <span class="badge badge-outline">Payments</span>
-                                <span class="badge badge-outline">Revenue</span>
-                                <span class="badge badge-outline">Automation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Payments Automation -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
+                    <!-- Case Study 8: Payments Automation -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
                                 <h3>Payments Automation - Strategic Revenue Infrastructure</h3>
-                                <p class="project-subtitle">500 demo requests and 50+ direct upgrade requests monthly drove automated payment system</p>
+                                <p>500 demo requests and 50+ direct upgrade requests monthly drove automated payment system</p>
                             </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <span class="case-trigger-icon">+</span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
                                     <h4>Context & Role</h4>
                                     <p>Led strategic decision and full execution to add automated payment collection mechanism across the platform. Worked with finance team, partner billing POCs, and paying customers to understand current process and design optimal flows.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Problem & Opportunity</h4>
                                     <p>With 500 demo requests and around 50 direct requests to upgrade and pay per month, manual payment processes were creating bottlenecks. Main challenges: tracking paid vs unpaid bots, linking paid subscriptions for smaller payments, managing partner billing, and getting pricing/packaging right for every region.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Actions Taken</h4>
                                     <ul>
                                         <li>Conducted user research with finance team, partner billing POCs, and paying customers</li>
@@ -556,123 +430,156 @@
                                         <li>Maintained manual PO billing path for enterprise customers requiring it</li>
                                     </ul>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Results & Impact</h4>
                                     <p>Successfully automated payment collection for high-volume smaller transactions while maintaining enterprise PO workflows. Enabled tracking of paid/unpaid bots with subscription linkage. Reduced payment friction for SME and partner segments.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Learnings</h4>
                                     <p>Regional pricing/packaging complexity was the biggest challenge. POC validation before full integration prevented costly mistakes. Maintaining dual paths (automated + manual PO) served different customer segments effectively.</p>
                                 </div>
                             </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge">Payments Automation</span>
-                                <span class="badge">500+ Monthly Demos</span>
-                                <span class="badge">Multi-region Pricing</span>
-                                <span class="badge">Subscription Management</span>
-                                <span class="badge">Revenue Infrastructure</span>
+                            <div class="case-tags">
+                                <span class="case-tag">Payments Automation</span>
+                                <span class="case-tag">500+ Monthly Demos</span>
+                                <span class="case-tag">Multi-region Pricing</span>
+                                <span class="case-tag">Subscription Management</span>
+                                <span class="case-tag">Revenue Infrastructure</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Self-Serve Platform & PLG -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
+                    <!-- Case Study 9: Self-Serve Platform -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
                                 <h3>Self-Serve Platform & PLG</h3>
-                                <p class="project-subtitle">Driving 5% of total company revenue</p>
+                                <p>Driving 5% of total company revenue</p>
                             </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <span class="case-trigger-icon">+</span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
                                     <h4>Problem</h4>
                                     <p>Reliance on a purely sales-led motion limited growth in the SMB segment. Smaller prospects faced high friction and long sales cycles, resulting in missed revenue opportunities.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Solution</h4>
                                     <p>Launched a comprehensive Self-Serve platform enabling users to sign up, onboard, and purchase subscriptions without sales intervention. Implemented PLG mechanics like freemium tiers and in-product upsells.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Impact</h4>
                                     <p>Successfully opened a new revenue stream, <strong>contributing 5% to the company's total revenue</strong>. Reduced customer acquisition cost (CAC) and accelerated adoption in the mid-market segment.</p>
                                 </div>
                             </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge badge-outline">PLG</span>
-                                <span class="badge badge-outline">Growth Strategy</span>
-                                <span class="badge badge-outline">Monetization</span>
+                            <div class="case-tags">
+                                <span class="case-tag outlined">PLG</span>
+                                <span class="case-tag outlined">Growth Strategy</span>
+                                <span class="case-tag outlined">Monetization</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Partner Onboarding & Billing -->
-                    <div class="accordion-item">
-                        <button class="accordion-trigger">
-                            <div class="project-header">
+                    <!-- Case Study 10: Partner Onboarding -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
                                 <h3>Partner Onboarding & Billing Automation</h3>
-                                <p class="project-subtitle">Streamlining operations for scale</p>
+                                <p>Streamlining operations for scale</p>
                             </div>
-                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <span class="case-trigger-icon">+</span>
                         </button>
-                        <div class="accordion-content">
-                            <div class="project-details">
-                                <div class="detail-section">
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
                                     <h4>Problem</h4>
                                     <p>Manual partner onboarding and complex PO-based billing reconciliation were prone to errors and consumed significant operational resources, creating a bottleneck for partnership expansion.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Solution</h4>
                                     <p>Automated the end-to-end partner onboarding workflow and built a robust PO billing automation system. This ensured accurate invoicing and seamless provisioning of partner accounts.</p>
                                 </div>
-                                
-                                <div class="detail-section">
+                                <div class="case-detail-section">
                                     <h4>Impact</h4>
                                     <p>Drastically reduced onboarding time and billing discrepancies. Enabled the operations team to support a growing partner network without proportional headcount increase.</p>
                                 </div>
                             </div>
-                            
-                            <div class="badge-group">
-                                <span class="badge badge-outline">Automation</span>
-                                <span class="badge badge-outline">FinTech</span>
-                                <span class="badge badge-outline">Operations</span>
+                            <div class="case-tags">
+                                <span class="case-tag outlined">Automation</span>
+                                <span class="case-tag outlined">FinTech</span>
+                                <span class="case-tag outlined">Operations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 11: Pricing Strategy -->
+                    <div class="case-item">
+                        <button class="case-trigger">
+                            <div class="case-trigger-content">
+                                <h3>Payments & Pricing Strategy</h3>
+                                <p>End-to-end payments automation and revenue optimization</p>
+                            </div>
+                            <span class="case-trigger-icon">+</span>
+                        </button>
+                        <div class="case-expand">
+                            <div class="case-details">
+                                <div class="case-detail-section">
+                                    <h4>Scope</h4>
+                                    <p>Led comprehensive work on pricing and packaging strategy, payments infrastructure, and billing automation. Connected product usage to revenue through telemetry and analytics.</p>
+                                </div>
+                                <div class="case-detail-section">
+                                    <h4>Key Deliverables</h4>
+                                    <ul>
+                                        <li>Pricing model based on usage patterns and customer segments</li>
+                                        <li>Automated billing and payments infrastructure</li>
+                                        <li>Revenue telemetry and reporting dashboards</li>
+                                        <li>Self-serve upgrade and payment flows</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="case-tags">
+                                <span class="case-tag outlined">Pricing</span>
+                                <span class="case-tag outlined">Payments</span>
+                                <span class="case-tag outlined">Revenue</span>
+                                <span class="case-tag outlined">Automation</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- CTA -->
-            <section class="cta-section">
-                <h2>Want to learn more about my work?</h2>
-                <p>Let's discuss how I can help transform your product strategy</p>
-                <div class="button-group">
-                    <a href="https://calendly.com/apoorvakshri/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        Schedule a Chat
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+        <!-- CTA -->
+        <section class="chapter chapter-cta">
+            <div class="chapter-marker">
+                <span class="chapter-num">✦</span>
+                <span class="chapter-line"></span>
+            </div>
+            <div class="chapter-content">
+                <div class="final-cta">
+                    <h2>Want to learn more about my work?</h2>
+                    <p>Let's discuss how I can help transform your product strategy</p>
+                    <div class="cta-buttons">
+                        <a href="https://calendly.com/apoorvakshri/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                            Schedule a Chat →
+                        </a>
+                        <a href="contact.html" class="btn btn-ghost">Contact Me</a>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <span>Apoorva Shrivastava</span>
+            <span class="footer-dot">·</span>
+            <span>Senior Product Manager</span>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
